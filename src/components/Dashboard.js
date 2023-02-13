@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SubDashboard from './Sub_dashboard';
 import "../css/Dashboard.css";
 
 function Dashboard(props) {
@@ -25,9 +26,14 @@ function Dashboard(props) {
         <div className='dashboard_main'>
            <h1>Dashboard</h1>
            <div className='btn_dash'>
-                <button id='sub_dashboard' onClick={() => onChangActive("sub")}>Subcription</button>
+                <button id='sub_dashboard' onClick={() => onChangActive("sub")} className="btn_active">Subcription</button>
                 <button id='rev_dashboard' onClick={() => onChangActive("rev")}>Revernue</button>
            </div> 
+           {
+             activeSub == 1 
+             ? <SubDashboard/>
+             : <div>revernue sub</div>
+           }
         </div>
     );
 }
