@@ -2,3 +2,10 @@
   margin: 24px 24px;
   display: flex;
 }
+
+.colum {
+  height: 500px;
+  border-left: 1px solid black;
+  margin-right: 50px;
+}
+

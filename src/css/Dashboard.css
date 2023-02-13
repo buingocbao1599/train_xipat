@@ -1,0 +1,18 @@
+.btn_dash{
+    padding: 10px 0px 0px 10px;
+}
+
+.btn_dash button {
+    width: 100px;
+    height: 40px;
+    margin-right: 16px;
+    background-color: aliceblue;
+}
+
+.btn_active {
+    color: aqua;
+}
+
+btn_disable {
+    color: black;
+}

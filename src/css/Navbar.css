@@ -1,3 +1,7 @@
+.navbar {
+    margin-right: 30px;
+}
+
 .navbar_list{
     display: flex;
     justify-content: center;
