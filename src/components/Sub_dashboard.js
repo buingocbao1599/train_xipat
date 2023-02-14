@@ -56,7 +56,7 @@ import {
   
   const Sub_dashboard = () => {
     return (
-      <div style={{ width: 600, height: 300 }}>
+      <div style={{ width: 900, height: 400, marginTop: '50px', display: "flex", justifyContent: "center", alignItems: 'center' }}>
         <Line options={options} data={data} />
       </div>
     );

@@ -1,0 +1,31 @@
+.quickview_main {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44%;
+    height: 500px;
+    background-color: antiquewhite;
+    margin-left: 35%;
+}
+
+.btn_close{
+    position: absolute;
+    height: 34px;
+    right: 10px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 350px;
+}
+
+.img_quick{
+    padding: 10px;
+}
+
+.img_quick img{
+    width: 300px;
+    height: 100%;
+    object-fit: scale-down;
+}

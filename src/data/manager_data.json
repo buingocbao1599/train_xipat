@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "BaoBn Chan",
+      "address": "3 waterfoot road",
+      "phoneNumber": "333-962-7516",
+      "email": "BaoBn.chan@email.com"
+    },
+    {
+      "id": 2,
+      "fullName": "aHuy warren",
+      "address": "4 tall town",
+      "phoneNumber": "011-211-7516",
+      "email": "aHuy.warren@email.com"
+    },
+    {
+      "id": 3,
+      "fullName": "aTrong Frank",
+      "address": "11 lesly road",
+      "phoneNumber": "788-962-7516",
+      "email": "aTrong.frank@email.com"
+    },
+    {
+      "id": 4,
+      "fullName": "LoanNguyen Clark",
+      "address": "333 miltown manor",
+      "phoneNumber": "011-962-111",
+      "email": "LoanNguyen.clark@email.com"
+    },
+    {
+      "id": 5,
+      "fullName": "CThuyet Edwards",
+      "address": "99 blue acres",
+      "phoneNumber": "3231-962-7516",
+      "email": "CThuyet.edwards@email.com"
+    }
+  ]

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SubDashboard from './Sub_dashboard';
 import "../css/Dashboard.css";
+import RercDashboard from './Revr_dashboard';
 
 function Dashboard(props) {
     const [activeSub, setActivesub] = useState(1);
@@ -32,7 +33,7 @@ function Dashboard(props) {
            {
              activeSub == 1 
              ? <SubDashboard/>
-             : <div>revernue sub</div>
+             : <RercDashboard />
            }
         </div>
     );
