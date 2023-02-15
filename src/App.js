@@ -14,6 +14,7 @@ import {
   Thumbnail,
   Layout,
   Page,
+  LegacyStack,
 } from "@shopify/polaris";
 import { useCallback, useState } from "react";
 
@@ -68,8 +69,8 @@ function App() {
   };
 
   const handleSaveTest = () => {
-    console.log("abc")
-  }
+    console.log("abc");
+  };
 
   return (
     <>
@@ -171,9 +172,13 @@ function App() {
           <Placeholder label="Content inside a box" />
         </Box>
 
+        <div>
+          <Text alignment="center" variant="heading3xl" as="h2">Pricing & Plans</Text>
+        </div>
+
         <div style={{ marginRight: "50px", marginLeft: "50px" }}>
           <Page fullWidth>
-            <Layout style={{color: "red"}}>
+            <Layout style={{ color: "red" }}>
               <Layout.Section oneThird>
                 <Card title="Florida" actions={[{ content: "Manage" }]}>
                   <Card.Section>
@@ -232,7 +237,14 @@ function App() {
                       }}
                     />
                   </Card.Section>
-                  <Button onClick={() => handleSaveTest()}>Save</Button>
+                  <LegacyStack vertical={true} alignment={'center'}>
+                    <Button onClick={() => handleSaveTest()} id="btn_save" pressed={true}>
+                      Save
+                    </Button>
+                    <Button onClick={() => handleSaveTest()} id="btn_save">
+                      Edit
+                    </Button>
+                  </LegacyStack>
                 </Card>
               </Layout.Section>
               <Layout.Section oneThird>
@@ -415,6 +427,7 @@ function App() {
                   </Card.Section>
                 </Card>
               </Layout.Section>
+              
             </Layout>
           </Page>
         </div>
