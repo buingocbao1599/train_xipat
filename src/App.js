@@ -7,7 +7,7 @@ import {
   PageActions,
   SettingToggle,
   Text,
-  AlphaCard,
+  // AlphaCard,
   Box,
   Card,
   ResourceList,
