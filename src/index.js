@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
+import App from './App';
 import Pricing from "./components/pricing"
+import CallApi from "./components/api"
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from '@shopify/polaris';
 import '@shopify/polaris/build/esm/styles.css';
@@ -11,8 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppProvider>
-      {/* <App /> */}
-      <Pricing />
+      <App />
+      {/* <Pricing /> */}
+      <CallApi />
     </AppProvider>
   </React.StrictMode>
 );

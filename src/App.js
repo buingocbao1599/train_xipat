@@ -7,7 +7,7 @@ import {
   PageActions,
   SettingToggle,
   Text,
-  // AlphaCard,
+  TextField,
   Box,
   Card,
   ResourceList,
@@ -15,6 +15,8 @@ import {
   Layout,
   Page,
   LegacyStack,
+  Tag,
+  Stack,
 } from "@shopify/polaris";
 import { useCallback, useState } from "react";
 
@@ -71,7 +73,18 @@ function App() {
   const handleSaveTest = () => {
     console.log("abc");
   };
+  // Test textfield
+  const [value, setValue] = useState('1776 Barnes Street\nOrlando, FL 32801');
 
+  const handleChange = useCallback((newValue) => setValue(newValue), []);
+  
+
+  const [textFieldValue, setTextFieldValue] = useState('');
+
+  const handleTextFieldChange = useCallback(
+    (value) => setTextFieldValue(value),
+    [],
+  );
   return (
     <>
       {/* Polaris Component Actions */}
@@ -431,6 +444,66 @@ function App() {
             </Layout>
           </Page>
         </div>
+
+
+      </div>
+
+      {/* Polaris Componet Selection and input */}
+      <TextField
+        label="Shipping address"
+        value={value}
+        onChange={handleChange}
+        multiline={5}
+        autoComplete="off"
+        id="text-filed"
+      />
+
+      <TextField
+        label="Store name"
+      value={textFieldValue}
+      onChange={handleTextFieldChange}
+      error="Store name is required"
+      autoComplete="off"
+      />
+
+
+      {/* Polaris test */}
+      <div >
+        <div style={{width: "350px"}}>Omega Theme</div>
+        <Page title="Product Tags">
+        <Layout>
+          <Layout.Section oneHalf>
+            <Card title="Product Name">
+                      <Card.Section>
+                        <Stack>
+                          <Tag onRemove={() => console.log("hello")}>Test</Tag>
+                          <Tag onRemove={console.log("hello")}>Test</Tag>
+
+                        </Stack>
+                      </Card.Section>
+
+                      <Card.Section>
+                        <p>Omega hahahahaahahahahhaaahaahahahah</p>
+                      </Card.Section>
+
+                      <Card.Section>
+                        <Stack distribution="equalSpacing">
+                          <TextField />
+                          {/* <Button primary>Add</Button> */}
+                          <p>aaaaaaaaaaaaaa</p>
+                        </Stack>
+
+                      </Card.Section>
+            </Card>
+          </Layout.Section>
+         
+          <Layout.Section oneHalf>
+            <Card title="Product Name">
+                      
+            </Card>
+          </Layout.Section>
+        </Layout>
+        </Page>
       </div>
     </>
   );

@@ -6,6 +6,7 @@ import {
   Layout,
   Page,
   LegacyStack,
+  TextField,
 } from "@shopify/polaris";
 import "../../css/pricing.css";
 
@@ -266,6 +267,13 @@ function Index() {
       <div className="body_plan">
         {tab === 1 ? <Tab1 data={dataTab1} /> : <Tab2 />}
       </div>
+
+
+      <TextField
+        label="Shipping address"
+        value="abc"
+         
+      />
     </>
   );
 }
