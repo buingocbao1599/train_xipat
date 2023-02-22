@@ -9,7 +9,7 @@ import {
   Tabs,
 } from "@shopify/polaris";
 import { TextMajor, CircleDownMajor } from "@shopify/polaris-icons";
-import DeliveryDate from "./widget_text-date";
+import DeliveryDate from "./widget-text_date";
 import StorePickup from "./widget-text_storepickup";
 
 function Widget_text(props) {

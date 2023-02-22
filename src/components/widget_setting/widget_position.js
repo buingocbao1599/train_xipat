@@ -29,6 +29,8 @@ function Widget_position(props) {
     () => setOpenPosition((open) => !open),
     []
   );
+
+  // callBackPosFunc( checkShowCalendar, checkRequireDate);
   return (
     <Card
       sectioned
