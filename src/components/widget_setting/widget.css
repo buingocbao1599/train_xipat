@@ -1,0 +1,39 @@
+#open-position{
+    margin-top: -50px;
+}
+
+.check_box-position{
+    display: flex;
+    flex-direction: column;
+}
+
+.Polaris-Grid{
+    margin-bottom: 10px !important;
+}
+
+#color-theme, #color-title, #color-text {
+    width: 37.5vw;
+    height: 20px;
+}
+
+.select-color_theme{
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    top: 24px;
+    right: 0px;
+    z-index: 1000;
+    border: 1px solid rgb(19, 17, 17);
+    border-radius: 0px 3px 3px 0px;
+    padding: 0px !important;
+    background: white;
+}
+
+.Polaris-Tabs__Tab--selected .Polaris-Tabs__Title::before{
+    background: red !important;
+}
+
+.Polaris-Connected :only-child{
+    margin-bottom: 10px;
+}
+
