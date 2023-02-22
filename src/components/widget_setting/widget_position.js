@@ -9,16 +9,22 @@ import {
   Checkbox,
 } from "@shopify/polaris";
 import { ProductsMajor, CircleDownMajor } from "@shopify/polaris-icons";
+import { useDispatch } from "react-redux";
+import { activeSave, disableSave } from "../../redux/actions";
 
 function Widget_position(props) {
   const [openPosition, setOpenPosition] = useState(true);
   const [checkShowCalendar, setCheckShowCalendar] = useState(false);
   const [checkRequireDate, setCheckRequireDate] = useState(false);
+  const dispatch = useDispatch();
 
   const handleChangeShowCalendar = useCallback(
-    (newChecked) => setCheckShowCalendar(newChecked),
-    []
-  );
+    (newChecked) => {
+      setCheckShowCalendar(newChecked);
+    
+      newChecked != checkShowCalendar ? dispatch(activeSave(1)) :dispatch(disableSave(0));
+    }
+  ,[]);
 
   const handleChangeRequireDate = useCallback(
     (newChecked) => setCheckRequireDate(newChecked),
