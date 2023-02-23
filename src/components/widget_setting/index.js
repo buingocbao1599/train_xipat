@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React from "react";
 import {
   Frame,
   ContextualSaveBar,
@@ -12,34 +12,28 @@ import Widget_text from "./widget-text";
 import "./widget.css";
 import { useSelector } from "react-redux";
 
-const initState = 0;
+// const initState = 0;
 
-const ACTIVE_TOP = "active";
-const DISABLE_TOP = "disable";
+// const ACTIVE_TOP = "active";
+// const DISABLE_TOP = "disable";
 
-const reducer = (state, action) => {
-  switch (action) {
-    case ACTIVE_TOP:
-      console.log("active");
-      return state = 1
-    case DISABLE_TOP:
-      console.log("disable");
-      return state = 0
-    default:
-      throw new Error('Invalid Action')
-  }
-}
+// const reducer = (state, action) => {
+//   switch (action) {
+//     case ACTIVE_TOP:
+//       console.log("active");
+//       return state = 1
+//     case DISABLE_TOP:
+//       console.log("disable");
+//       return state = 0
+//     default:
+//       throw new Error('Invalid Action')
+//   }
+// }
 
 function Index() {
-  const [activeSave, dispatch] = useReducer(reducer, initState);
-  const [active, setActive] = useState(0);
 
-  const abc = useSelector((state) => state);
-  console.log("abc: ", abc);
-
-  const handdlerActive = () => {
-    setActive(1);
-  }
+  const statusSaveBtn = useSelector((state) => state.statusBtnSave);
+  console.log("statusSaveBtn: ", statusSaveBtn);
 
   return (
     <div>
@@ -47,7 +41,7 @@ function Index() {
         <Frame>
 
           {
-            abc === 1
+            statusSaveBtn === 1
               ?
               <ContextualSaveBar
                 alignContentFlush

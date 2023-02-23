@@ -9,7 +9,7 @@ import {
   Checkbox,
 } from "@shopify/polaris";
 import { ProductsMajor, CircleDownMajor } from "@shopify/polaris-icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { activeSave, disableSave } from "../../redux/actions";
 
 function Widget_position(props) {
@@ -17,26 +17,39 @@ function Widget_position(props) {
   const [checkShowCalendar, setCheckShowCalendar] = useState(false);
   const [checkRequireDate, setCheckRequireDate] = useState(false);
   const dispatch = useDispatch();
+  
+
+  const reduxCheckShowCalendar = useSelector((state) => state.widgetPosition.showTheCalendar);
+  const reduxCheckRequireDate = useSelector((state) => state.widgetPosition.showTheCalendar);
+
+  const handleStatusBtnSave = (newDataCalendar, newDataDate) => {
+      if(newDataCalendar === reduxCheckShowCalendar && newDataDate === reduxCheckRequireDate){
+        dispatch(disableSave(0));
+      } else {
+        dispatch(activeSave(1));
+      }
+  }
+
+  handleStatusBtnSave(checkShowCalendar, checkRequireDate);
+
 
   const handleChangeShowCalendar = useCallback(
     (newChecked) => {
       setCheckShowCalendar(newChecked);
-    
-      newChecked != checkShowCalendar ? dispatch(activeSave(1)) :dispatch(disableSave(0));
     }
   ,[]);
 
   const handleChangeRequireDate = useCallback(
-    (newChecked) => setCheckRequireDate(newChecked),
-    []
-  );
+    (newChecked) => {
+      setCheckRequireDate(newChecked);
+    }
+    ,[]);
 
   const handleTogglePosition = useCallback(
     () => setOpenPosition((open) => !open),
     []
   );
 
-  // callBackPosFunc( checkShowCalendar, checkRequireDate);
   return (
     <Card
       sectioned

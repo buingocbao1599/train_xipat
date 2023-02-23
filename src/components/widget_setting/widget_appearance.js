@@ -112,7 +112,7 @@ function Widget_appearance() {
             <Grid>
               <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
                 <Select
-                  label="layout"
+                  label="Layout"
                   options={options}
                   onChange={handleSelectChange}
                   value={selected}
@@ -187,7 +187,7 @@ function Widget_appearance() {
               <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
                 <div style={{ display: "flex", position: "relative" }}>
                   <TextField
-                    label="Store name"
+                    label="Title color"
                     value={colorTitle}
                     onChange={handleColorTitleChange}
                     autoComplete="off"
@@ -203,7 +203,7 @@ function Widget_appearance() {
               <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
                 <div style={{ display: "flex", position: "relative" }}>
                   <TextField
-                    label="Store name"
+                    label="Required message text color"
                     value={colorMessage}
                     onChange={handleColorMessageChange}
                     autoComplete="off"
