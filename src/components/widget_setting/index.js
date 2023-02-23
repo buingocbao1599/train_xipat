@@ -30,17 +30,7 @@ function Index() {
           {
             (statusSavePos === 0 && statusSaveApp === 0 && statusSaveText === 0)
               ?
-              <ContextualSaveBar
-                alignContentFlush
-                message="Unsaved changes"
-                saveAction={{
-                  onAction: () => console.log("add form submit logic"),
-                  disabled: "true"
-                }}
-                discardAction={{
-                  onAction: () => console.log("add clear form logic"),
-                }}
-              />
+              <></>
               :
               <ContextualSaveBar
                 alignContentFlush
