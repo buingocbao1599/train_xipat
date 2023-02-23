@@ -66,7 +66,7 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 statusBtnSave: {
                     ...state.statusBtnSave,
-                    btnPosition: 0
+                    btnPosition: action.payload
                 }
             }
         case "disable/SaveApp":
@@ -74,7 +74,7 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 statusBtnSave: {
                     ...state.statusBtnSave,
-                    btnAppearance: 0
+                    btnAppearance: action.payload
                 }
             }
         case "disable/SaveText":

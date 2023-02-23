@@ -44,7 +44,6 @@ function Widget_appearance() {
       } else {
         dispatch(disableSaveApp(0));
       }
-       
   }
 
   const handleBtnSave = () => {

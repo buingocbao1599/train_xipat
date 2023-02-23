@@ -20,7 +20,7 @@ function Widget_position(props) {
   
 
   const reduxCheckShowCalendar = useSelector((state) => state.widgetPosition.showTheCalendar);
-  const reduxCheckRequireDate = useSelector((state) => state.widgetPosition.showTheCalendar);
+  const reduxCheckRequireDate = useSelector((state) => state.widgetPosition.requireDelivery);
  
 
   const handleStatusBtnSave = () => {
@@ -31,8 +31,6 @@ function Widget_position(props) {
       }
   }
 
- useEffect(() => handleStatusBtnSave(), [checkShowCalendar || checkRequireDate]);
- 
   const saveDataUpRedux = () => {
     const data = {
       showTheCalendar: checkShowCalendar,
@@ -40,8 +38,15 @@ function Widget_position(props) {
     }
     dispatch(handlerSavePos(data));
   }
+
+ useEffect(() => {
+    handleStatusBtnSave();
+    saveDataUpRedux();
+  }, [checkShowCalendar || checkRequireDate]);
+ 
   
-  useEffect(() => saveDataUpRedux(), [checkShowCalendar || checkRequireDate]);
+  
+  // useEffect(() => saveDataUpRedux(), [checkShowCalendar || checkRequireDate]);
   
 
   const handleChangeShowCalendar = useCallback(

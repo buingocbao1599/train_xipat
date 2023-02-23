@@ -16,14 +16,12 @@ function Index() {
   const statusSavePos = useSelector((state) => state.statusBtnSave.btnPosition);
   const statusSaveApp = useSelector((state) => state.statusBtnSave.btnAppearance);
   const statusSaveText = useSelector((state) => state.statusBtnSave.btnText);
-  // const dataForm = useEffect(useSelector((state) => state.statusBtnSave), []);
-  let status = useSelector((state) => state);
+  const status = useSelector((state) => state);
   
-  
-  useEffect(() => {
-    console.log("dataForm: ", status);
-  },[]);
-  
+  // useEffect(() => {
+  //   console.log("dataForm: ", status);
+  // },[]);
+
   return (
     <div>
       <div style={{ height: "100px" }}>
@@ -48,9 +46,7 @@ function Index() {
                 alignContentFlush
                 message="Unsaved changes"
                 saveAction={{
-                  onAction: () => console.log("status: ", status)
-                  
-                  
+                  onAction: () => console.log("Data Handler Save Button: ", status)
                 }}
                 discardAction={{
                   onAction: () => console.log("add clear form logic"),
