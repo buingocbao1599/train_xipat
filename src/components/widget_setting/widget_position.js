@@ -31,16 +31,17 @@ function Widget_position(props) {
       }
   }
 
- useEffect(() => handleStatusBtnSave(), [checkShowCalendar || checkRequireDate])
+ useEffect(() => handleStatusBtnSave(), [checkShowCalendar || checkRequireDate]);
  
-  // const saveDataUpRedux = () => {
-  //   const data = {
-  //     showTheCalendar: checkShowCalendar,
-  //     requireDelivery: checkRequireDate
-  //   }
-  //   dispatch(handlerSavePos(data));
-  // }
-  // saveDataUpRedux();
+  const saveDataUpRedux = () => {
+    const data = {
+      showTheCalendar: checkShowCalendar,
+      requireDelivery: checkRequireDate
+    }
+    dispatch(handlerSavePos(data));
+  }
+  
+  useEffect(() => saveDataUpRedux(), [checkShowCalendar || checkRequireDate]);
   
 
   const handleChangeShowCalendar = useCallback(

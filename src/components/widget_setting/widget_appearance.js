@@ -14,7 +14,7 @@ import {
 } from "@shopify/polaris";
 import { PaintBrushMajor, CircleDownMajor } from "@shopify/polaris-icons";
 import { useDispatch, useSelector } from "react-redux";
-import { disableSaveApp, activeSaveApp } from "../../redux/actions";
+import { disableSaveApp, activeSaveApp, handlerSaveApp } from "../../redux/actions";
 
 function Widget_appearance() {
   const [openAppearance, setOpenAppearance] = useState(true);
@@ -47,8 +47,27 @@ function Widget_appearance() {
        
   }
 
-    
+  const handleBtnSave = () => {
+    // layout: action.payload.layout,
+    //                 calendarLayout: action.payload.calendarLayout,
+    //                 calendarLanguage: action.payload.calendarLanguage,
+    //                 calendartFirstDay: action.payload.calendartFirstDay,
+    //                 dateFormat: action.payload.dateFormat,
+    //                 storeName: action.payload.storeName,
+    //                 titleColor: action.payload.titleColor,
+    //                 textColorMessage: action.payload.textColorMessage
+    const data = {
+      storeName: colorTheme,
+      titleColor: colorTitle,
+      textColorMessage: colorMessage
+    }
+
+    dispatch(handlerSaveApp(data));
+  }
+
   useEffect(() => handleStatusBtnSave(),[colorTheme || colorTitle || colorMessage]);
+  useEffect(() => handleBtnSave(),[colorTheme || colorTitle || colorMessage])
+
 
   const options = [
     { label: "Today", value: "today" },
@@ -86,17 +105,14 @@ function Widget_appearance() {
   );
 
   const handleColorThemeChange = (value) => {
-    console.log("hàm bên trên:", value);
     setColorTheme(value);
   };
 
   const handleColorTitleChange = (value) => {
-    console.log("hàm bên trên:", value);
     setColorTitle(value);
   };
 
   const handleColorMessageChange = (value) => {
-    console.log("hàm bên trên:", value);
     setColorMessage(value);
   };
   return (

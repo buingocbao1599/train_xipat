@@ -99,11 +99,11 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 widgetAppearance: {
                     ...state.widgetAppearance,
-                    layout: action.payload.layout,
-                    calendarLayout: action.payload.calendarLayout,
-                    calendarLanguage: action.payload.calendarLanguage,
-                    calendartFirstDay: action.payload.calendartFirstDay,
-                    dateFormat: action.payload.dateFormat,
+                    // layout: action.payload.layout,
+                    // calendarLayout: action.payload.calendarLayout,
+                    // calendarLanguage: action.payload.calendarLanguage,
+                    // calendartFirstDay: action.payload.calendartFirstDay,
+                    // dateFormat: action.payload.dateFormat,
                     storeName: action.payload.storeName,
                     titleColor: action.payload.titleColor,
                     textColorMessage: action.payload.textColorMessage
