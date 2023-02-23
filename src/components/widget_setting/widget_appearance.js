@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   Card,
   Stack,
@@ -13,32 +13,42 @@ import {
   TextField,
 } from "@shopify/polaris";
 import { PaintBrushMajor, CircleDownMajor } from "@shopify/polaris-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { disableSaveApp, activeSaveApp } from "../../redux/actions";
 
 function Widget_appearance() {
   const [openAppearance, setOpenAppearance] = useState(true);
   const [selected, setSelected] = useState("");
-  const [checked, setChecked] = useState(false);
+  const [checkbox, setCheckbox] = useState(false);
   const [colorTheme, setColorTheme] = useState("#000000");
   const [colorTitle, setColorTitle] = useState("#b11b1b");
   const [colorMessage, setColorMessage] = useState("#3d8e1a");
 
-  const handleChange = useCallback((newChecked) => setChecked(newChecked), []);
+  const handleChange = useCallback((newcheckbox) => setCheckbox(newcheckbox), []);
   const handleSelectChange = useCallback((value) => setSelected(value), []);
+  const dispatch = useDispatch();
+  
+  const reduxLayou = useSelector((state) => state.widgetAppearance.layout);
+  const reduxCalenLay = useSelector((state) => state.widgetAppearance.calendarLayout);
+  const reduxCalenLanguage = useSelector((state) => state.widgetAppearance.calendarLanguage);
+  const reduxCalenFirstDay = useSelector((state) => state.widgetAppearance.calendartFirstDay);
+  const reduxDateFormat = useSelector((state) => state.widgetAppearance.dateFormat);
+  const reduxStoreName = useSelector((state) => state.widgetAppearance.storeName);
+  const reduxTitleColor = useSelector((state) => state.widgetAppearance.titleColor);
+  const reduxColorMess = useSelector((state) => state.widgetAppearance.textColorMessage);
 
-  const handleColorThemeChange = (value) => {
-    console.log("hàm bên trên:", value);
-    setColorTheme(value);
-  };
 
-  const handleColorTitleChange = (value) => {
-    console.log("hàm bên trên:", value);
-    setColorTitle(value);
-  };
+  const handleStatusBtnSave = () => {
+      if (colorTheme !== reduxStoreName || colorTitle !== reduxTitleColor || colorMessage !== reduxColorMess) {
+        dispatch(activeSaveApp(1));
+      } else {
+        dispatch(disableSaveApp(0));
+      }
+       
+  }
 
-  const handleColorMessageChange = (value) => {
-    console.log("hàm bên trên:", value);
-    setColorMessage(value);
-  };
+    
+  useEffect(() => handleStatusBtnSave(),[colorTheme || colorTitle || colorMessage]);
 
   const options = [
     { label: "Today", value: "today" },
@@ -74,6 +84,21 @@ function Widget_appearance() {
     () => setOpenAppearance((open) => !open),
     []
   );
+
+  const handleColorThemeChange = (value) => {
+    console.log("hàm bên trên:", value);
+    setColorTheme(value);
+  };
+
+  const handleColorTitleChange = (value) => {
+    console.log("hàm bên trên:", value);
+    setColorTitle(value);
+  };
+
+  const handleColorMessageChange = (value) => {
+    console.log("hàm bên trên:", value);
+    setColorMessage(value);
+  };
   return (
     <Card
       sectioned
@@ -127,7 +152,7 @@ function Widget_appearance() {
                 />
                 <Checkbox
                   label="Basic checkbox"
-                  checked={checked}
+                  checked={checkbox}
                   onChange={handleChange}
                 />
               </Grid.Cell>

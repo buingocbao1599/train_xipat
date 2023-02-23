@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Frame,
   ContextualSaveBar,
@@ -12,42 +12,32 @@ import Widget_text from "./widget-text";
 import "./widget.css";
 import { useSelector } from "react-redux";
 
-// const initState = 0;
-
-// const ACTIVE_TOP = "active";
-// const DISABLE_TOP = "disable";
-
-// const reducer = (state, action) => {
-//   switch (action) {
-//     case ACTIVE_TOP:
-//       console.log("active");
-//       return state = 1
-//     case DISABLE_TOP:
-//       console.log("disable");
-//       return state = 0
-//     default:
-//       throw new Error('Invalid Action')
-//   }
-// }
-
 function Index() {
-
-  const statusSaveBtn = useSelector((state) => state.statusBtnSave);
-  console.log("statusSaveBtn: ", statusSaveBtn);
-
+  const statusSavePos = useSelector((state) => state.statusBtnSave.btnPosition);
+  const statusSaveApp = useSelector((state) => state.statusBtnSave.btnAppearance);
+  const statusSaveText = useSelector((state) => state.statusBtnSave.btnText);
+  // const dataForm = useEffect(useSelector((state) => state.statusBtnSave), []);
+  let status = useSelector((state) => state);
+  
+  
+  useEffect(() => {
+    console.log("dataForm: ", status);
+  },[]);
+  
   return (
     <div>
       <div style={{ height: "100px" }}>
         <Frame>
 
           {
-            statusSaveBtn === 1
+            (statusSavePos === 0 && statusSaveApp === 0 && statusSaveText === 0)
               ?
               <ContextualSaveBar
                 alignContentFlush
                 message="Unsaved changes"
                 saveAction={{
                   onAction: () => console.log("add form submit logic"),
+                  disabled: "true"
                 }}
                 discardAction={{
                   onAction: () => console.log("add clear form logic"),
@@ -58,8 +48,9 @@ function Index() {
                 alignContentFlush
                 message="Unsaved changes"
                 saveAction={{
-                  onAction: () => console.log("add form submit logic"),
-                  disabled: "true"
+                  onAction: () => console.log("status: ", status)
+                  
+                  
                 }}
                 discardAction={{
                   onAction: () => console.log("add clear form logic"),

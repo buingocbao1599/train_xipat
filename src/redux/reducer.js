@@ -1,5 +1,9 @@
 const initState = {
-    statusBtnSave: 0,
+    statusBtnSave: {
+        btnPosition: 0,
+        btnAppearance: 0,
+        btnText: 0
+    },
     widgetPosition: {
         showTheCalendar: false,
         requireDelivery: false
@@ -33,16 +37,87 @@ const initState = {
 
 const rootReducer = (state = initState, action) => {
     switch(action.type) {
-        case "active":
+        case "active/SavePos":
             return {
                 ...state,
-                statusBtnSave: 1
+                statusBtnSave: {
+                    ...state.statusBtnSave,
+                    btnPosition: action.payload
+                },
             }
-        case "disable":
+        case "active/SaveAppear":
+                return {
+                    ...state,
+                    statusBtnSave: {
+                        ...state.statusBtnSave,
+                        btnAppearance: action.payload
+                    },
+            }
+        case "active/SaveText":
+                    return {
+                        ...state,
+                        statusBtnSave: {
+                            ...state.statusBtnSave,
+                            btnText: action.payload
+                        },
+            }
+        case "disable/SavePos":
             return {
                 ...state,
-                statusBtnSave: 0
+                statusBtnSave: {
+                    ...state.statusBtnSave,
+                    btnPosition: 0
+                }
             }
+        case "disable/SaveApp":
+            return {
+                ...state,
+                statusBtnSave: {
+                    ...state.statusBtnSave,
+                    btnAppearance: 0
+                }
+            }
+        case "disable/SaveText":
+            return {
+                ...state,
+                statusBtnSave: {
+                    ...state.statusBtnSave,
+                    btnText: 0
+                }
+            }
+        case "handleSave/Pos":
+            return {
+                ...state,
+                widgetPosition: {
+                    ...state.widgetPosition,
+                    showTheCalendar: action.payload.showTheCalendar,
+                    requireDelivery: action.payload.requireDelivery
+                }
+            }
+        case "handleSave/App":
+            return {
+                ...state,
+                widgetAppearance: {
+                    ...state.widgetAppearance,
+                    layout: action.payload.layout,
+                    calendarLayout: action.payload.calendarLayout,
+                    calendarLanguage: action.payload.calendarLanguage,
+                    calendartFirstDay: action.payload.calendartFirstDay,
+                    dateFormat: action.payload.dateFormat,
+                    storeName: action.payload.storeName,
+                    titleColor: action.payload.titleColor,
+                    textColorMessage: action.payload.textColorMessage
+                },
+            }
+        // case "handleSave/Text":
+        //     return {
+        //         ...state,
+        //         widgetPosition: {
+        //             ...state.widgetPosition,
+        //             showTheCalendar: action.payload.showTheCalendar,
+        //             requireDelivery: action.payload.requireDelivery
+        //         }
+        //     }
         default:
             return state
     }
