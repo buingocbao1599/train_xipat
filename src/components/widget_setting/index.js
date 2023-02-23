@@ -10,14 +10,17 @@ import Widget_appearance from "./widget_appearance";
 import Widget_position from "./widget_position";
 import Widget_text from "./widget-text";
 import "./widget.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { disableSaveText, disableSavePos, disableSaveApp } from "../../redux/actions";
+
 
 function Index() {
-  const statusSavePos = useSelector((state) => state.statusBtnSave.btnPosition);
-  const statusSaveApp = useSelector((state) => state.statusBtnSave.btnAppearance);
-  const statusSaveText = useSelector((state) => state.statusBtnSave.btnText);
+  let statusSavePos = useSelector((state) => state.statusBtnSave.btnPosition);
+  let statusSaveApp = useSelector((state) => state.statusBtnSave.btnAppearance);
+  let statusSaveText = useSelector((state) => state.statusBtnSave.btnText);
   const status = useSelector((state) => state);
   
+  const dispatch = useDispatch();
   // useEffect(() => {
   //   console.log("dataForm: ", status);
   // },[]);
@@ -39,7 +42,11 @@ function Index() {
                   onAction: () => console.log("Data Handler Save Button: ", status)
                 }}
                 discardAction={{
-                  onAction: () => console.log("add clear form logic"),
+                  onAction: () => {
+                    dispatch(disableSaveText(0));
+                    dispatch(disableSaveApp(0));
+                    dispatch(disableSavePos(0));
+                  },
                 }}
               />
           }
