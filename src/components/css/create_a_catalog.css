@@ -1,0 +1,12 @@
+.create_catalog-main {
+    margin: 16px;
+  }
+
+.selected-create_catalog {
+    padding: 10px;
+}
+
+#select-account, #select-product {
+    margin-top: 10px;
+}
+  

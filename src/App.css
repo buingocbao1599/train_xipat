@@ -1,38 +1,130 @@
-.App {
+#catalog_manager-heading {
+  width: 165px;
+  height: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
   text-align: center;
+  margin-left: 12px;
+  margin-top: 20px;
+  color: #202223;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Css Connection requirement */
+.body_connection_require {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+#connect_requir-heading {
+  margin-top: 39px;
+  color: #202223;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'Inter';
+  font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.connect_requir-description {
+  max-width: 455px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #6D7175;
+
 }
+
+#sign_in_tiktok {
+  position: relative;
+  width: 256px;
+  height: 39px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  color: #FFFFFF;
+  background: #020203;
+  border-radius: 5px;
+}
+
+#sign_in_tiktok svg {
+  position: absolute;
+  left: 0;
+}
+
+/* End Css Connection requirement */
+
+
+
+
+
+/* Css Create Business Acount */
+.create_business_account-main {
+  margin: 16px;
+}
+
+.sign_in-main {
+  display: flex;
+  align-items: center;
+}
+
+.sign_in-main img {
+  margin-right: 12px;
+}
+
+.body_create_business{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#create_business_account {
+  margin-top: 39px;
+  color: #202223;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'Inter';
+  font-style: normal;
+}
+
+#create_ads_manager {
+  width: 256px;
+  height: 39px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  color: #FFFFFF;
+  background: #020203;
+  border-radius: 5px;
+}
+
+.create_business-description {
+  max-width: 555px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #6D7175;
+}
+
+/* End Css Create Business Acount */

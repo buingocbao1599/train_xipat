@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import {
+  Page,
+  Text,
+} from "@shopify/polaris";
 import './App.css';
+import Catalog_connection_require from './components/catalog_connection_require';
+import Catalog_create_business from "./components/catalog_create_business";
+import Create_a_catalog from "./components/create_a_catalog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Page>
+      <Text id='catalog_manager-heading'> Catalog Manager </Text>
+      <Catalog_connection_require />
+      <Catalog_create_business />
+      <Create_a_catalog />
+    </Page>
   );
 }
 
