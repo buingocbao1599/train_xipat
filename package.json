@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@shopify/polaris": "^10.28.0",
+    "@shopify/shopify-api": "^6.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

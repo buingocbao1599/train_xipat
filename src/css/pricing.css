@@ -1,0 +1,113 @@
+.btn_changetab :nth-child(1) {
+  width: 135px;
+  height: 36px;
+
+  background: #ffffff;
+  border: 1px solid #2c6ecb;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.btn_changetab :nth-child(2) {
+  width: 127.85px;
+  height: 36.14px;
+  left: 737.15px;
+  top: 146.93px;
+
+  background: #ffffff;
+  border: 1px solid #bccfe9;
+  border-radius: 5px;
+}
+
+.name_plan {
+  margin-left: 20px;
+  text-transform: uppercase;
+  padding-top: 32px;
+  margin-bottom: 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #202223;
+}
+
+.body_plan {
+  display: flex;
+  justify-content: center;
+}
+
+.layout_section {
+  max-width: 255px;
+}
+
+#btn_current {
+  margin: 20px 10px;
+  width: 214px;
+  height: 38px;
+  color: black;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+}
+
+#btn_choose {
+  margin: 20px 10px;
+  width: 214px;
+  height: 38px;
+  color: #ffffff;
+  background: #2c6ecb;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+}
+
+.price_plan {
+  margin-left: 20px;
+  height: 26px;
+}
+
+.price {
+  display: flex;
+}
+
+.price_free {
+  width: 62px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 20px;
+  color: #202223;
+}
+
+.price_valid {
+  width: 104px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 20px;
+  color: #202223;
+}
+
+.price_currency {
+  margin-right: 6px;
+  margin-top: -5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #202223;
+  display: flex;
+  align-items: start;
+}
+
+.pixel_plan {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}

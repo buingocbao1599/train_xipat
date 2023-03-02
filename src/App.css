@@ -41,3 +41,10 @@
 #btn_save{
   margin-bottom: 10px;
 }
+
+#text-filed{
+  color: red;
+  width: 20px !important;
+  height: 100px !important;
+  font-size: 18px;
+}

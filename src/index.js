@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom/client';
 import Modal1 from './components/modal1';
 import Modal2 from './components/pricing/modal2';
 import './index.css';
+
 // import App from './App';
 import Pricing from "./components/pricing";
+
+
+import App from './App';
+import Pricing from "./components/pricing"
+import CallApi from "./components/api"
 
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from '@shopify/polaris';
@@ -14,10 +20,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppProvider>
+
       {/* <App /> */}
       {/* <Pricing /> */}
       {/* <Modal1 /> */}
       <Modal2 />
+
+      {/* <App /> */}
+      {/* <Pricing /> */}
+      {/* <CallApi /> */}
+
     </AppProvider>
   </React.StrictMode>
 );
