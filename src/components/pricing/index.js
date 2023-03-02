@@ -4,7 +4,7 @@ import React, { useCallback, useState, memo, useRef} from 'react'
 function Index() {
     const [tab, setTab] = useState(1);
 
-    const show  = useRef(1);
+    const show  = useRef (1);
 
     const handleChangeTab = useCallback((x) => {
         if(x == 1){

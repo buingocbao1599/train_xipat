@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Modal1 from './components/modal1';
+import Modal2 from './components/pricing/modal2';
 import './index.css';
 // import App from './App';
-import Pricing from "./components/pricing"
+import Pricing from "./components/pricing";
+
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from '@shopify/polaris';
 import '@shopify/polaris/build/esm/styles.css';
@@ -12,7 +15,9 @@ root.render(
   <React.StrictMode>
     <AppProvider>
       {/* <App /> */}
-      <Pricing />
+      {/* <Pricing /> */}
+      {/* <Modal1 /> */}
+      <Modal2 />
     </AppProvider>
   </React.StrictMode>
 );
