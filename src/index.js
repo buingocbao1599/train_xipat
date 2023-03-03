@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,9 +11,12 @@ import en from "@shopify/polaris/locales/en.json";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppProvider i18n={en}>
-      <App />
-    </AppProvider>
+    <BrowserRouter>
+      <AppProvider i18n={en}>
+        <App />
+      </AppProvider>
+
+    </BrowserRouter>
   </React.StrictMode>
 );
 

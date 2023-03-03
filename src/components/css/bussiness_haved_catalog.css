@@ -1,0 +1,38 @@
+.bc_have_cata-main {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.bc_have_cata {
+    padding: 12px;
+}
+
+.bc_have_cata-create_cata {
+    /* padding: 10px; */
+}
+
+.bc_have_cata-text_tiktok {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+
+}
+
+.bc_have_cata-create_cata span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6D7175;
+}
+
+.bc_have_cata_radio {
+    margin-top: 26px;
+}
+
+.radio-cata-example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

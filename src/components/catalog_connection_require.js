@@ -18,7 +18,7 @@ function Catalog_connection_require(props) {
                             <div className="body_connection_require">
 
                                 <svg width="44" height="60" viewBox="0 0 44 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31 15C31 10.037 26.963 6 22 6C17.037 6 13 10.037 13 15V23H31V15ZM37 23V15C37 6.716 30.284 0 22 0C13.716 0 7 6.716 7 15V23H2C0.895 23 0 23.895 0 25V45C0 53.284 6.716 60 15 60H29C37.284 60 44 53.284 44 45V25C44 23.895 43.105 23 42 23H37ZM22 50C20.343 50 19 48.657 19 47V35C19 33.343 20.343 32 22 32C23.657 32 25 33.343 25 35V47C25 48.657 23.657 50 22 50Z" fill="#69C9D0" />
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M31 15C31 10.037 26.963 6 22 6C17.037 6 13 10.037 13 15V23H31V15ZM37 23V15C37 6.716 30.284 0 22 0C13.716 0 7 6.716 7 15V23H2C0.895 23 0 23.895 0 25V45C0 53.284 6.716 60 15 60H29C37.284 60 44 53.284 44 45V25C44 23.895 43.105 23 42 23H37ZM22 50C20.343 50 19 48.657 19 47V35C19 33.343 20.343 32 22 32C23.657 32 25 33.343 25 35V47C25 48.657 23.657 50 22 50Z" fill="#69C9D0" />
                                 </svg>
                                 <Text id='connect_requir-heading'> Connection requirement</Text>
                                 <p className="connect_requir-description">This feature requires to connect with your TikTok Ads Manager to create catalogs from Shopify products. Be assured that our program has tightly forbidden any access to sensitive data, such as revenue or customer data</p>

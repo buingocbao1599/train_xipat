@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import {
     SettingToggle, RadioButton,
     Text,
@@ -7,24 +7,33 @@ import {
     LegacyCard,
     Select,
     Stack,
-    Button
+    Button,
+    Card
 } from '@shopify/polaris';
+import "./css/bussiness_have_catalog2.css";
 import tiktok_logo from "./img/tiktok-logo.png";
-import "./css/create_a_catalog.css"
 
-function Create_a_catalog(props) {
-    const [active, setActive] = useState(true);
-    const [selectedAccount, setSelectedAccount] = useState('today');
-    const [selectedProduct, setSelectedProduct] = useState('today');
+
+function Bussiness_haved_catalog(props) {
+
+    // config of checkbox
     const [value, setValue] = useState('disabled');
-
     const handleChange = useCallback(
         (_checked, newValue) => setValue(newValue),
         [],
     );
+    // end config of chechbox
+
+    // config of Toggle Log out and Sigin
+    const [active, setActive] = useState(true);
+    const [selectedAccount, setSelectedAccount] = useState('today');
+    const handleToggle = useCallback(() => setActive((active) => !active), []);
+
+    const contentStatus = active ? 'Log out' : 'Log in';
+    const textStatus = active ? 'Harley' : 'Tiktok Account';
 
     const handleSelectChangeAccount = useCallback((value) => setSelectedAccount(value), []);
-    const handleSelectChangeProduct = useCallback((value) => setSelectedProduct(value), []);
+    // end config of Toggle Log ou
 
     const options = [
         { label: 'Today', value: 'today' },
@@ -32,14 +41,9 @@ function Create_a_catalog(props) {
         { label: 'Last 7 days', value: 'lastWeek' },
     ];
 
-    const handleToggle = useCallback(() => setActive((active) => !active), []);
-
-    const contentStatus = active ? 'Log out' : 'Log in';
-    const textStatus = active ? 'Harley' : 'Tiktok Account';
-
     return (
-        <>
-            <div className='create_catalog-main'>
+        <div className='bc_have_cata2-main'>
+            <div className='business_haved_catalog2'>
                 <SettingToggle
                     action={{
                         content: contentStatus,
@@ -62,26 +66,40 @@ function Create_a_catalog(props) {
                 <Layout>
                     <Layout.Section fullWidth>
                         <LegacyCard>
-                            <div className="selected-create_catalog">
+                            <div style={{ marginTop: "20px" }} className="">
                                 <p className='text-create_catalog'>CREATE A CATALOG</p>
-                                <Select
-                                    label="Business Center account"
-                                    options={options}
-                                    onChange={selectedAccount}
-                                    value={handleSelectChangeAccount}
-                                    id="select-account"
-                                />
+                                <div className=''>
+                                    <Select
+                                        label="Business Center account"
+                                        options={options}
+                                        onChange={selectedAccount}
+                                        value={handleSelectChangeAccount}
+                                        id="select-account"
+                                    />
 
-                                <Select
-                                    label="Product cate"
-                                    options={options}
-                                    onChange={selectedProduct}
-                                    value={handleSelectChangeProduct}
-                                    id="select-product"
-                                />
+                                    <div className=''>
+                                        <p className=''>TikTok Catalog</p>
+                                        <span>Please select a catalog to sync Shopify items with</span>
+                                        <div className='bc_have_cata2-card_new_cata'>
+                                            <LegacyCard sectioned title="Please name your new catalog" actions={[{ content: 'Add variant' }]}>
+                                                <p>
+                                                    Add variants if this product comes in multiple versions, like different
+                                                    sizes or colors.
+                                                </p>
+                                            </LegacyCard>
+                                        </div>
+                                    </div>
 
-                                <div>
-                                    <Text id='product_on_catalog-text'>Product on Catalog</Text>
+                                    <Select
+                                        label="Product cateegory"
+                                        options={options}
+                                        onChange={selectedAccount}
+                                        value={handleSelectChangeAccount}
+                                        id="select-account"
+                                    />
+                                </div>
+                                <div className='bc_not_cata-chekbox'>
+                                    <Text id=''>Choose the items you want to sync with the catalog</Text>
                                     <Stack vertical>
                                         <RadioButton
                                             label="Accounts are disabled"
@@ -101,7 +119,7 @@ function Create_a_catalog(props) {
                                         />
                                     </Stack>
                                 </div>
-                                <div className='btn-create_Catalog'>
+                                <div className=''>
                                     <Button>Create Catalog</Button>
                                 </div>
                             </div>
@@ -109,8 +127,8 @@ function Create_a_catalog(props) {
                     </Layout.Section>
                 </Layout>
             </Page>
-        </>
+        </div>
     );
 }
 
-export default Create_a_catalog;
+export default Bussiness_haved_catalog;

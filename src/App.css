@@ -72,7 +72,7 @@
 
 /* Css Create Business Acount */
 .create_business_account-main {
-  margin: 16px;
+  margin: 14px 24px;
 }
 
 .sign_in-main {
@@ -128,3 +128,15 @@
 }
 
 /* End Css Create Business Acount */
+
+/* css Navbar */
+.navbar ul{
+  display: flex;
+}
+
+.navbar ul li{
+  margin-right: 10px;
+  text-decoration: none;
+  list-style: none;
+}
+/* end css Navbar */

@@ -1,0 +1,48 @@
+.bc_not_have_cata-main{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.business_haved_catalog {
+    margin: 14px 24px;
+}
+
+.bc_not_catalog .text-create_catalog {
+    height: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 46px;
+    color: #202223;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+.bc_not_cata-select {
+    padding: 10px;
+}
+
+.bc_not_cata-chekbox {
+    padding: 0px 10px;
+}
+
+#bc_not_cata-chekbox_text{
+    margin-bottom: 16px;
+}
+
+.bc_not_cata-chekbox .Polaris-Stack .Polaris-Stack--vertical {
+    margin-top: 10px;
+}
+
+.bc_not_cata-btn_create {
+    display: flex;
+    margin-top: 20px;
+    justify-content: end;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.bc_not_cata-btn_create button {
+    background: #000000;
+    color: #fff;
+}
