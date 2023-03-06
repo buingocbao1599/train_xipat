@@ -1,0 +1,10 @@
+.action_catalog a {
+    display: block;
+    padding: 5px;
+}
+
+.Polaris-Icon {
+    margin: unset !important;
+    height: 1rem !important;
+    width: 1rem !important;
+}

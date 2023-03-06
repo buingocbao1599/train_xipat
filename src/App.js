@@ -9,7 +9,8 @@ import Catalog_connection_require from './components/catalog_connection_require'
 import Catalog_create_business from "./components/catalog_create_business";
 import Create_a_catalog from "./components/create_a_catalog";
 import Bussiness_haved_catalog from "./components/bussiness_haved_catalog";
-import Bussiness_haved_catalog_two from "./components/bussiness_haved_catalog2"
+import Bussiness_haved_catalog_two from "./components/bussiness_haved_catalog2";
+import List_Catalog from "./components/list_catalog";
 import Navbar from "./Navbar";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/bussines_not_have_cata" element={<Business_not_haved_catalog />}></Route>
         <Route path="/bussines_have_cata" element={<Bussiness_haved_catalog />}></Route>
         <Route path="/2bussines_have_cata" element={<Bussiness_haved_catalog_two />}></Route>
+        <Route path="/listcatalog" element={<List_Catalog />}></Route>
       </Routes>
       
     </div>

@@ -13,6 +13,7 @@ function Navbar(props) {
                 <li><Link to="/bussines_not_have_cata">BC Not Have Catalog</Link></li>
                 <li><Link to="/bussines_have_cata">BC Have Catalog</Link></li>
                 <li><Link to="/2bussines_have_cata">BC Have Catalog2</Link></li>
+                <li><Link to="/listcatalog">List Catalog</Link></li>
             </ul>
         </div>
     );
