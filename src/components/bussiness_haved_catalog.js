@@ -24,6 +24,15 @@ function Bussiness_haved_catalog(props) {
     );
     // end config of chechbox
 
+    // config Product source
+    const [valueProdSource, setValueProdSource] = useState('allProducts');
+    const handleChangeProductSource = useCallback(
+        (_checked, newValue) => setValueProdSource(newValue),
+        [],
+    );
+    // end config Product source
+    
+
     // config of Toggle Log out and Sigin
     const [active, setActive] = useState(true);
     const [selectedAccount, setSelectedAccount] = useState('today');
@@ -41,6 +50,14 @@ function Bussiness_haved_catalog(props) {
         { label: 'Last 7 days', value: 'lastWeek' },
     ];
 
+
+    // config radio footer
+    const [valueRadioFoot, setValueRadioFoot] = useState('disabled');
+
+    const handleChangeRadioFoot = useCallback(
+      (_checked, newValue) =>  setValueRadioFoot(newValue),
+      [],);
+    // end config radio footer
 
 
     return (
@@ -121,44 +138,63 @@ function Bussiness_haved_catalog(props) {
                                         </div>
                                     </div>
 
-                                    <Select
-                                        label="Product cateegory"
-                                        options={options}
-                                        onChange={selectedAccount}
-                                        value={handleSelectChangeAccount}
-                                        id="select-account"
-                                    />
+                                    <div className='bc_have_cata-select_foot'>
+
+                                        <Card.Section>
+                                            <div className=''>
+                                                <p className='bc_have_cata-text_tiktok'>Product source</p>
+                                                <p className='bc_have_cata-text_product'>Choose the items you want to sync with the catalog</p>
+                                                <Stack vertical>
+                                                    <RadioButton
+                                                        label="All products"
+                                                        // helpText="Customers will only be able to check out as guests."
+                                                        checked={valueProdSource === 'allProducts'}
+                                                        id="allProducts"
+                                                        name="allProducts"
+                                                        onChange={handleChangeProductSource}
+                                                    />
+                                                    <RadioButton
+                                                        label="Specific product(s)"
+                                                        // helpText="Customers will be able to check out with a customer account or as a guest."
+                                                        id="specificProduct"
+                                                        name="specificProduct"
+                                                        checked={valueProdSource === 'specificProduct'}
+                                                        onChange={handleChangeProductSource}
+                                                    />
+                                                </Stack>
+                                            </div>
+                                        </Card.Section>
+
+                                        <Card.Section>
+                                            <div className='bc_have_cata-select_foot2'>
+                                                <p className='bc_have_cata-text_tiktok'>Automatic Upload</p>
+                                                <p style={{marginTop: "6px", marginBottom: "6px"}}>Plan your submit feed schedule</p>
+                                                <div className='bc_have_cata-radio_foot'>
+                                                    <RadioButton label="Hourly" onChange={handleChangeRadioFoot} checked={valueRadioFoot === 'radio1'} id="radio1"></RadioButton>
+                                                    <RadioButton label="Daily" onChange={handleChangeRadioFoot} checked={valueRadioFoot === 'radio2'}  id="radio2"></RadioButton>
+                                                    <RadioButton label="Weekly" onChange={handleChangeRadioFoot} checked={valueRadioFoot === 'radio3'} id="radio3"></RadioButton>
+                                                    <RadioButton label="Monthly" onChange={handleChangeRadioFoot} checked={valueRadioFoot === 'radio4'}  id="radio4"></RadioButton>
+                                                </div>
+                                            </div>
+
+                                        </Card.Section>
+
+                                    </div>
+
+
                                 </div>
-                                <div className='bc_not_cata-chekbox'>
-                                    <Text id='bc_not_cata-chekbox_text'>Choose the items you want to sync with the catalog</Text>
-                                    <Stack vertical>
-                                        <RadioButton
-                                            label="Accounts are disabled"
-                                            // helpText="Customers will only be able to check out as guests."
-                                            checked={value === 'disabled'}
-                                            id="disabled"
-                                            name="accounts"
-                                            onChange={handleChange}
-                                        />
-                                        <RadioButton
-                                            label="Accounts are optional"
-                                            // helpText="Customers will be able to check out with a customer account or as a guest."
-                                            id="optional"
-                                            name="accounts"
-                                            checked={value === 'optional'}
-                                            onChange={handleChange}
-                                        />
-                                    </Stack>
-                                </div>
+
                                 <div className='bc_not_cata-btn_create'>
                                     <Button>Create Catalog</Button>
                                 </div>
                             </div>
                         </LegacyCard>
                     </Layout.Section>
+
+
                 </Layout>
-            </Page>
-        </div>
+            </Page >
+        </div >
     );
 }
 
