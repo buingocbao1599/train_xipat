@@ -1,0 +1,81 @@
+.bc_not_cata-main{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.bc_not_cata-login {
+    margin: 14px 24px;
+}
+
+.bc_not_cata .text-create_catalog {
+    height: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 46px;
+    color: #202223;
+    padding-top: 6px;
+    padding-left: 10px;
+    box-shadow: 0px 1px #e4e4e4;
+}
+
+.bc_not_cata-btn_create {
+    display: flex;
+    margin-top: 20px;
+    justify-content: end;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.bc_not_cata-btn_create button {
+    background: #000000;
+    color: #fff;
+}
+
+/* css new */
+.bc_not_cata-bdy {
+    padding: 6px 12px;
+}
+
+.bc_not_cata-create_cata span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6D7175;
+}
+
+.bc_not_cata-text_heading {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.bc_not_cata_new {
+    margin-top: 10px;
+    box-shadow: 0px 1px #e4e4e4;
+    padding-bottom: 26px;
+}
+
+.bc_not_cata-select_foot .Polaris-Card__Section {
+    padding: 0;
+    margin-top: 14px;
+}
+
+.bc_not_cata-text_product {
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.bc_not_cata-select_foot2 {
+    margin-top: 15px;
+}
+
+.bc_not_cata-select_foot2 .bc_not_cata-radio_foot .Polaris-Choice {
+    margin-right: 24px;
+}
+
+/* end css new */
+
+
+

@@ -4,7 +4,7 @@ import {
 } from "@shopify/polaris";
 // import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Business_not_haved_catalog from "./components/business_not_haved_catalog";
+import Business_not_haved_catalog from "./components/Step2_Bc_not_cata";
 import Catalog_connection_require from './components/Step1_Login';
 import Catalog_create_business from "./components/catalog_create_business";
 import Create_a_catalog from "./components/create_a_catalog";

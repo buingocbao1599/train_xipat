@@ -1,0 +1,51 @@
+.create_business_account-main{
+    padding-left: 16%;
+    padding-right: 16%;
+}
+
+.create_bc-login {
+    margin: 0px 24px;
+}
+
+.body_create_business{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+#create_business_account {
+    margin-top: 39px;
+    color: #202223;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.create_business-description {
+    max-width: 555px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #6D7175;
+}
+
+#create_ads_manager {
+    width: 256px;
+    height: 39px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF;
+    background: #020203;
+    border-radius: 5px;
+  }

@@ -16,7 +16,7 @@ import tiktok_logo from "./img/tiktok-logo.png";
 
 function Bussiness_haved_catalog(props) {
     // config click click "Create a new catalog" and "Select an existed catalog"
-    const [display, setDisplay] = useState(true);
+    const [display, setDisplay] = useState(3);
     const [newProduct, setNewProduct] = useState('');
     // end config click click "Create a new catalog" and "Select an existed catalog"
 
@@ -106,7 +106,7 @@ function Bussiness_haved_catalog(props) {
                                         <p className='bc_have_cata-text_tiktok'>TikTok Catalog</p>
                                         <span>Please select a catalog to sync Shopify items with</span>
                                         {
-                                            display
+                                            display === 1
                                                 ?
                                                 (<div className='bc_have_cata_radio'>
                                                     <Card>
@@ -143,19 +143,20 @@ function Bussiness_haved_catalog(props) {
 
                                                         <Card.Section>
                                                             <div className='bc_have_cata-btn_cre_new_cata'>
-                                                                <Button onClick={() => setDisplay(false)}>Create a new catalog</Button>
+                                                                <Button onClick={() => setDisplay(2)}>Create a new catalog</Button>
                                                             </div>
                                                         </Card.Section>
                                                     </Card>
                                                 </div>)
-                                                :
+                                                : display === 2
+                                                ?
                                                 (
                                                     <div className='bc_have_cata_new'>
                                                         <Card>
                                                             <Card.Section>
                                                                 <div className='bc_have_cata_new_label'>
                                                                     <Text>Please name your new catalog</Text>
-                                                                    <a href="#" onClick={() => setDisplay(true)}>Select an existed catalog</a>
+                                                                    <a href="#" onClick={() => setDisplay(1)}>Select an existed catalog</a>
                                                                 </div>
                                                                 <TextField
                                                                     value={newProduct}
@@ -166,11 +167,28 @@ function Bussiness_haved_catalog(props) {
                                                         </Card>
                                                     </div>
                                                 )
+                                                :
+                                                (
+                                                    <div className='bc_have_cata_new'>
+                                                    <Card>
+                                                        <Card.Section>
+                                                            <div className='bc_have_cata_new_label'>
+                                                                <Text>Please name your new catalog</Text>
+                                                                {/* <a href="#" onClick={() => setDisplay(1)}>Select an existed catalog</a> */}
+                                                            </div>
+                                                            <TextField
+                                                                value={newProduct}
+                                                                onChange={(e) => setNewProduct(e.target.value)}
+                                                                placeholder="Enter here"
+                                                            />
+                                                        </Card.Section>
+                                                    </Card>
+                                                </div>
+                                                )
                                         }
 
                                     </div>
-                                    <br/>
-                                    <hr />
+                                  
                                     <div className='bc_have_cata-select_foot'>
 
                                         <Card.Section>
@@ -242,8 +260,6 @@ function Bussiness_haved_catalog(props) {
                             </div>
                         </LegacyCard>
                     </Layout.Section>
-
-
                 </Layout>
             </Page >
         </div >
