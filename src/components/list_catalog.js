@@ -1,113 +1,131 @@
-import { Icon, IndexTable, Layout, LegacyCard, SettingToggle, Text, TextField, Tooltip } from '@shopify/polaris'
+import { Icon, IndexTable, Layout, LegacyCard, SettingToggle, Text, TextField, Button } from '@shopify/polaris'
 import {
     ArrowDownMinor,
     ArrowUpMinor,
     SearchMajor
 } from '@shopify/polaris-icons';
 import tiktok_logo from "./img/tiktok-logo.png";
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import './css/list_Catalog.css'
+import PaginationComponent from './common/components/Pagination';
 
 const ListCatalog = () => {
     const [textSearch, setTextSearch] = useState('');
     const [sortASC, setSortASC] = useState(false);
     const [sortDEC, setSortDEC] = useState(false);
 
-    const customers = [
+    // config Pagination
+    const listCatalog = [
         {
-            id: '3411',
-            url: '#',
-            catalog: (
-                <>
-                    <a href="#">Catalog 1</a>
-                    <p>ID: 123456789</p>
-                </>
-            ),
-            bc_account: 'Xipat',
-            last_update: 'Feb 3, 2023 15:31:00',
-            action: (
-                <div className='action_catalog'>
-                    <Tooltip preferredPosition='above' content="Click here If any updates to the products are not updated">
-                        <a href="#">Sync</a>
-                    </Tooltip>
-                    <Tooltip preferredPosition='above' content="Delete products synced by the app from TikTok Catalog ">
-                        <a href="#">Delete</a>
-                    </Tooltip>
-                </div>
-            ),
+            nameCatalog: "Catalog 1",
+            idCatalog: "111111111",
+            bcAccount: "Xipat1",
+            timerCatalog: "Feb 3, 2023 15:31:00"
         },
         {
-            id: '2561',
-            url: '#',
-            catalog: (
-                <>
-                    <a href="#">Catalog 2</a>
-                    <p>ID: 123456789</p>
-                </>
-            ),
-            bc_account: 'Xipat',
-            last_update: 'Feb 3, 2023 15:31:00',
-            action: (
-                <div className='action_catalog'>
-                    <Tooltip preferredPosition='above' content="Click here If any updates to the products are not updated">
-                        <a href="#">Sync</a>
-                    </Tooltip>
-                    <Tooltip preferredPosition='above' content="Delete products synced by the app from TikTok Catalog ">
-                        <a href="#">Delete</a>
-                    </Tooltip>
-                </div>
-            ),
+            nameCatalog: "Catalog 2",
+            idCatalog: "2222222",
+            bcAccount: "Xipat1",
+            timerCatalog: "Feb 3, 2023 15:31:00"
         },
         {
-            id: '2561',
-            url: '#',
-            catalog: (
-                <>
-                    <a href="#">Catalog 3</a>
-                    <p>ID: 123456789</p>
-                </>
-            ),
-            bc_account: 'Xipat',
-            last_update: 'Feb 3, 2023 15:31:00',
-            action: (
-                <div className='action_catalog'>
-                    <Tooltip preferredPosition='above' content="Click here If any updates to the products are not updated">
-                        <a href="#">Sync</a>
-                    </Tooltip>
-                    <Tooltip preferredPosition='above' content="Delete products synced by the app from TikTok Catalog ">
-                        <a href="#">Delete</a>
-                    </Tooltip>
-                </div>
-            ),
+            nameCatalog: "Catalog 3",
+            idCatalog: "3333333",
+            bcAccount: "Xipat1",
+            timerCatalog: "Feb 3, 2023 15:31:00"
         },
-    ];
-    const resourceName = {
-        singular: 'customer',
-        plural: 'customers',
+        {
+            nameCatalog: "Catalog 4",
+            idCatalog: "44444444",
+            bcAccount: "Xipat1",
+            timerCatalog: "Feb 3, 2023 15:31:00"
+        },
+        {
+            nameCatalog: "Catalog 5",
+            idCatalog: "555555555",
+            bcAccount: "Xipat1",
+            timerCatalog: "Feb 3, 2023 15:31:00"
+        },
+        {
+            nameCatalog: "Catalog 6",
+            idCatalog: "666666666",
+            bcAccount: "Xipat1",
+            timerCatalog: "Feb 3, 2023 15:31:00"
+        },
+    ]
+    const [list, setList] = useState([]);
+    const [pagination, setPagination] = useState({
+        limit: 5,
+        page: 1,
+        total: 2,
+    });
+
+    const handlePaginationChange = (value, key) => {
+        let newPagination = {
+            ...pagination,
+            [key]: value,
+        };
+
+        let total = parseInt(listCatalog.length / newPagination.limit);
+        total = listCatalog.length % newPagination.limit > 0 ? total + 1 : total;
+        setPagination({ ...newPagination, total: total });
     };
-    const rowMarkup = customers.map(
-        ({ id, catalog, bc_account, last_update, action }, index) => (
-            <IndexTable.Row id={id} key={id} position={index}>
+
+    useEffect(() => {
+        const list_catalog = [];
+        listCatalog.length > 0 && listCatalog.map((item) => {
+            return list_catalog.push({ ...item, id: item.idCatalog });
+        });
+        setList(list_catalog);
+        let total = parseInt(list_catalog.length / pagination.limit);
+        total = list_catalog.length % pagination.limit > 0 ? total + 1 : total;
+        let page = pagination.page;
+        if (pagination.page > 1)
+            page = (listCatalog.length >= (pagination.limit * (pagination.page - 1) + 1)) ? pagination.page : pagination.page - 1;
+        setPagination({
+            ...pagination,
+            total: total,
+            page: page
+        });
+        // handleSelectionChange('page', false, null);
+    }, []);
+
+    const listCatalogMap = list.filter((item, index) => {
+        return (
+            index < pagination.page * pagination.limit &&
+            index >= pagination.limit * (pagination.page - 1)
+        );
+    }).map(
+        (catalog, index) => (
+            <IndexTable.Row id={catalog.idCatalog} key={catalog.idCatalog} position={index}>
                 <IndexTable.Cell>
                     <Text variant="bodyMd" as="span">
-                        {catalog}
+                        <>
+                            <a href="#">{catalog.nameCatalog}</a>
+                            <p>ID: {catalog.idCatalog}</p>
+                        </>
                     </Text>
                 </IndexTable.Cell>
                 <IndexTable.Cell>
-                    {bc_account}
+                    {catalog.bcAccount}
                 </IndexTable.Cell>
                 <IndexTable.Cell>
                     <Text variant="bodyMd" as="span" numeric>
-                        {last_update}
+                        {catalog.timerCatalog}
                     </Text>
                 </IndexTable.Cell>
                 <IndexTable.Cell>
-                    {action}
+                    <Button plain>Delete</Button>
                 </IndexTable.Cell>
             </IndexTable.Row>
         ),
     );
+
+
+    // end config Pagination
+
+
 
     // config of Toggle Log out and Sigin
     const [active, setActive] = useState(true);
@@ -117,7 +135,7 @@ const ListCatalog = () => {
     const textStatus = active ? 'Harley' : 'Tiktok Account';
     // end config of Toggle Log out
     return (
-        <>
+        <div className='list_catalog-main'>
             <Layout.Section>
                 <SettingToggle
                     action={{
@@ -158,8 +176,7 @@ const ListCatalog = () => {
             <Layout.Section>
                 <LegacyCard>
                     <IndexTable
-                        resourceName={resourceName}
-                        itemCount={customers.length}
+                        itemCount={listCatalog.length}
                         headings={[
                             { title: 'Catalog' },
                             { title: 'Business Center account' },
@@ -193,11 +210,21 @@ const ListCatalog = () => {
                         ]}
                         selectable={false}
                     >
-                        {rowMarkup}
+                        {listCatalogMap}
                     </IndexTable>
+
+                    <div className='bc_have_cata-pagination'>
+                        <PaginationComponent
+                            pagination={pagination}
+                            handlePaginationChange={handlePaginationChange}
+                            pd={16}
+                            isShow={(pagination.total !== 1 && pagination.total !== 0) || listCatalog.length > 5}
+                        />
+                    </div>
+
                 </LegacyCard>
             </Layout.Section>
-        </>
+        </div>
     )
 }
 

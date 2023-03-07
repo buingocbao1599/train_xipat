@@ -1,0 +1,100 @@
+.bc_have_cata-main {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.bc_have_cata .text-create_catalog {
+    box-shadow: 0px 1px #e4e4e4;
+    height: 42px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 12px;
+    color: #202223;
+}
+
+.bc_have_cata-body {
+    padding: 6px 12px;
+}
+
+.bc_have_cata-text_tiktok {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+
+}
+
+.bc_have_cata-create_cata span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6D7175;
+}
+
+.bc_have_cata_radio {
+    margin-top: 26px;
+}
+
+.radio-cata-example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bc_have_cata-select_foot .Polaris-Card__Section {
+    padding: 0;
+    margin-top: 14px;
+}
+
+.bc_have_cata-select_foot2 {
+    margin-top: 15px;
+}
+
+
+
+.bc_have_cata-select_foot2 .bc_have_cata-radio_foot .Polaris-Choice {
+    margin-right: 24px;
+}
+
+.bc_have_cata-text_tiktok {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #202223;
+}
+
+.bc_have_cata-text_product {
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.bc_have_cata-chekbox_btn_specific div {
+    margin-top: 10px;
+}
+
+.bc_have_cata-chekbox_btn_specific div button {
+    width: 186px;
+    text-align: center;
+    
+}
+
+.bc_have_cata-chekbox_btn_specific div button .Polaris-Button__Content {
+    justify-content: left;
+}
+
+.bc_have_cata-btn_cre_new_cata span {
+    color: #000000;;
+}
+
+.bc_have_cata_new {
+    margin-top: 10px;
+}
+
+.bc_have_cata_new_label {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+}

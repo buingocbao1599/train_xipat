@@ -1,10 +1,25 @@
+.list_catalog-main {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.list_catalog-main a {
+    text-decoration: none;
+}
+
 .action_catalog a {
     display: block;
     padding: 5px;
+    text-decoration: none;
 }
 
 .Polaris-Icon {
     margin: unset !important;
     height: 1rem !important;
     width: 1rem !important;
+}
+
+.bc_have_cata-pagination{
+    display: flex;
+    justify-content: right;
 }
