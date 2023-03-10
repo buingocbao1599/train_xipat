@@ -1,0 +1,47 @@
+.create_business_account-main {
+    position: relative;
+}
+
+.create_business_account-main .Polaris-LegacyStack {
+    margin: auto;
+}
+
+.create_business_account-main .Polaris-LegacyStack>.Polaris-LegacyStack__Item {
+    margin: 15px;
+}
+
+.card_switch_account {
+    width: 300px;
+    position: absolute;
+    right: 0;
+    z-index: 10000;
+}
+
+.detail_account {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.detail_account img {
+    padding-right: 10px;
+}
+
+.infor_account h4 {
+    font-weight: 700;
+}
+
+.infor_account p {
+    color: #939393;
+    font-weight: 400;
+}
+
+.btn_add_account {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+}
+
+.btn_add_account span {
+    margin-left: 5px;
+}

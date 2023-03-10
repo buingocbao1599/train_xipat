@@ -16,44 +16,45 @@ const ListCatalog = () => {
     const [sortDEC, setSortDEC] = useState(false);
 
     // config Pagination
-    const listCatalog = [
+    const [listCatalog, setListCataLog] = useState([
         {
             nameCatalog: "Catalog 1",
             idCatalog: "111111111",
             bcAccount: "Xipat1",
-            timerCatalog: "Feb 3, 2023 15:31:00"
+            timerCatalog: "15:32:00"
         },
         {
             nameCatalog: "Catalog 2",
             idCatalog: "2222222",
             bcAccount: "Xipat1",
-            timerCatalog: "Feb 3, 2023 15:31:00"
+            timerCatalog: "15:31:00"
         },
         {
             nameCatalog: "Catalog 3",
             idCatalog: "3333333",
             bcAccount: "Xipat1",
-            timerCatalog: "Feb 3, 2023 15:31:00"
+            timerCatalog: "15:31:00"
         },
         {
             nameCatalog: "Catalog 4",
             idCatalog: "44444444",
             bcAccount: "Xipat1",
-            timerCatalog: "Feb 3, 2023 15:31:00"
+            timerCatalog: "15:31:00"
         },
         {
             nameCatalog: "Catalog 5",
             idCatalog: "555555555",
             bcAccount: "Xipat1",
-            timerCatalog: "Feb 3, 2023 15:31:00"
+            timerCatalog: "15:33:00"
         },
         {
             nameCatalog: "Catalog 6",
             idCatalog: "666666666",
             bcAccount: "Xipat1",
-            timerCatalog: "Feb 3, 2023 15:31:00"
+            timerCatalog: "15:31:00"
         },
-    ]
+    ])
+    
     const [list, setList] = useState([]);
     const [pagination, setPagination] = useState({
         limit: 5,
@@ -134,6 +135,28 @@ const ListCatalog = () => {
     const contentStatus = active ? 'Log out' : 'Log in';
     const textStatus = active ? 'Harley' : 'Tiktok Account';
     // end config of Toggle Log out
+
+
+    // function Filter list
+    const listCatalogSortAsc = (listCatalog) => {
+        const data = listCatalog.sort(function (a, b) {
+            return a.timerCatalog.localeCompare(b.timerCatalog);
+        });
+        setList(data);
+        console.log("data listCatalogSortAsc: ", data)
+    }
+
+    const listCatalogSortDec = (listCatalog) => {
+        const data = listCatalog.sort((a,b) => {
+            return a.timerCatalog.localeCompare(b.timerCatalog);
+        })
+
+        const list = data.reverse();
+
+        setList(list);
+        console.log("data listCatalogSortDec: ", data);
+    }
+    // end function Filter
     return (
         <div className='list_catalog-main'>
             <Layout.Section>
@@ -186,6 +209,7 @@ const ListCatalog = () => {
                                         <div onClick={() => {
                                             setSortDEC(true)
                                             setSortASC(false)
+                                            listCatalogSortDec(listCatalog)
                                         }}
                                         >
                                             <Icon
@@ -196,6 +220,7 @@ const ListCatalog = () => {
                                         <div onClick={() => {
                                             setSortASC(true)
                                             setSortDEC(false)
+                                            listCatalogSortAsc(listCatalog)
                                         }}
                                         >
                                             <Icon
