@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.banner_main {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 118px;
+  // background: linear-gradient(180deg, #94ffd5 0%, #94ffd5 100%);
+  background: linear-gradient(90.36deg, #68C9F7 9.36%, #BEEAFF 89.96%);
+
+  .banner-close {
+    position: absolute;
+    right: 1.08%;
+    top: 13.48%;
+  }
+
+  .button_grab-free {
+    background: #C1FF72;
+    width: 258px;
+    height: 50px;
+    display: flex;
+
+    .Polaris-Button {
+      background: #C1FF72;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Polaris-Button__Text {
+      // width: 196px;
+      height: 30px;
+
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+
+      color: #05386B;
+    }
+
+    svg {
+      margin-left: 10px;
+    }
+  }
+
+  .banner-picture {
+    position: absolute;
+    width: 161px;
+    height: 145px;
+    left: 672px;
+    top: 0px;
+  }
+
+  .banner-btn {
+    display: flex;
+    margin-left: 73%;
+    align-items: center;
+
+    .banner-btn_tracking {
+      position: absolute;
+      width: 185px;
+      height: 24px;
+      left: 66%;
+      top: 46px;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration-line: underline;
+
+      color: #252eff;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .banner-btn_started {
+      position: absolute;
+      left: 80%;
+      top: 31px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 178px;
+      height: 56px;
+      background: #6278f7;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: #e8fff6;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .banner-popup {
+    height: 118px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.popup-title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #6278f7;
+  display: flex;
+}
+
+.banner-popup_picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
