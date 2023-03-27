@@ -19,6 +19,7 @@
     height: 100%;
     align-items: center;
     margin-left: 6%;
+    width: 50%;
 
     .banner-text_heading {
 
@@ -31,21 +32,65 @@
         color: #05386B;
       }
 
-      .text-don_be_shy {
-        position: relative;
-        z-index: 1000;
+      .text-don_be_shy:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 41px;
+        width: 160px;
+        height: 15px;
+        background-color: #C1FF72;
+        z-index: 0;
 
       }
 
-      .text-give {
-        position: relative;
-        z-index: 1000;
-
+      .text-don_be_shy:before {
+        content: "Don't be shy,";
+        position: absolute;
+        left: 0;
+        bottom: 41px;
+        color: #05386B;
+        z-index: 1;
       }
 
-      .text-a_try{
-        position: relative;
-        z-index: 1000;
+      .text-give:after {
+        content: '';
+        position: absolute;
+        left: 172px;
+        bottom: 41px;
+        width: 54px;
+        height: 15px;
+        background-color: #C1FF72;
+        z-index: 0;
+      }
+
+      .text-give:before {
+        content: "give";
+        position: absolute;
+        left: 172px;
+        bottom: 41px;
+        color: #05386B;
+        z-index: 1;
+      }
+
+      .text-a_try:after {
+        content: '';
+        position: absolute;
+        left: 517px;
+        bottom: 41px;
+        width: 57px;
+        height: 15px;
+        background-color: #C1FF72;
+        z-index: 0;
+      }
+
+      .text-a_try::before {
+        content: "a try";
+        position: absolute;
+        left: 517px;
+        bottom: 41px;
+        color: #05386B;
+        z-index: 1;
       }
 
       .text-svg_underlined {
@@ -106,27 +151,46 @@
     display: flex;
     margin-left: 80%;
     align-items: center;
+
+    .banner-popup {
+      height: 118px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+}
+
+
+
+.background-banner_cross {
+  position: relative;
+  background: url(./IMG/background_popup_banner.png);
+
+  .popup-banner_cross-main {
+    // position: absolute;
+    // top: 0;
+  }
+}
+
+
+
+@media screen and (width: 375px){
+  .banner-text {
+    width: 94%;
   }
 
   .banner-popup {
-    height: 118px;
-    display: flex;
-    align-items: center;
+    svg {
+      position: absolute;
+      width: 10px;
+      z-index: 100;
+      margin-left: 7px;
+    }
+  }
+
+  .banner-btn {
+    margin-left: 5%;
   }
 }
 
-.popup-title {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #6278f7;
-  display: flex;
-}
-
-.banner-popup_picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { Modal, TextContainer, Button } from "@shopify/polaris";
-import pic_banner_cross from "./IMG/pic_banner_cross.png"
+import pic_banner_cross from "./IMG/pic_banner_cross.png";
+import icon_popup_banner_cross from "./IMG/icon-popup_banner_cross.png";
 import background_popup_banner_cross from "./IMG/background_popup_banner.png"
 import './App.scss';
 
@@ -23,7 +24,7 @@ function App() {
         >
           Grab free remedies
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7 6.29L9.69999 1.29C9.51999 1.1 9.26999 0.989998 8.98999 0.989998C8.43999 0.989998 7.98999 1.44 7.98999 1.99C7.98999 2.27 8.09999 2.52 8.27999 2.7L11.57 5.99H1.98999C1.43999 5.99 0.98999 6.44 0.98999 6.99C0.98999 7.54 1.43999 7.99 1.98999 7.99H11.58L8.28999 11.28C8.10999 11.46 7.99999 11.71 7.99999 11.99C7.99999 12.54 8.44999 12.99 8.99999 12.99C9.27999 12.99 9.52999 12.88 9.70999 12.7L14.71 7.7C14.89 7.52 15 7.27 15 6.99C15 6.71 14.88 6.47 14.7 6.29Z" fill="#05386B" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M14.7 6.29L9.69999 1.29C9.51999 1.1 9.26999 0.989998 8.98999 0.989998C8.43999 0.989998 7.98999 1.44 7.98999 1.99C7.98999 2.27 8.09999 2.52 8.27999 2.7L11.57 5.99H1.98999C1.43999 5.99 0.98999 6.44 0.98999 6.99C0.98999 7.54 1.43999 7.99 1.98999 7.99H11.58L8.28999 11.28C8.10999 11.46 7.99999 11.71 7.99999 11.99C7.99999 12.54 8.44999 12.99 8.99999 12.99C9.27999 12.99 9.52999 12.88 9.70999 12.7L14.71 7.7C14.89 7.52 15 7.27 15 6.99C15 6.71 14.88 6.47 14.7 6.29Z" fill="#05386B" />
           </svg>
 
         </Button>
@@ -50,53 +51,38 @@ function App() {
       <div className="banner-text">
         <div className="banner-text_heading">
           <p className="text-don_be_shy"> Don't be shy, </p>
-          <div className="text-svg_underlined">
-            <svg width={160} height={10} viewBox="0 0 160 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width={160} height={10} fill="#C1FF72" />
-            </svg>
-          </div>
+          
         </div>
         <div className="banner-text_heading" style={{ marginLeft: '14px' }}>
           <p className="text-give">give</p>
-          <div className="text-svg_underlined">
-            <svg width="54" height="10" viewBox="0 0 54 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="54" height="10" fill="#C1FF72" />
-            </svg>
-          </div>
+          
         </div>
         <div className="banner-text_content">
           Twitter Ads
         </div>
         <div className="banner-text_heading">
           <p className="text-a_try">a try</p>
-          <div className="text-svg_underlined">
-            <svg width={57} height={10} viewBox="0 0 57 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width={57} height={10} fill="#C1FF72" />
-            </svg>
-          </div>
         </div>
       </div>
       <div className="banner-picture">
         <img src={pic_banner_cross} />
       </div>
       <div className="banner-btn">
-        <div className="banner-popup">
+        <div className="banner-popup"> 
           <Modal
             activator={activator()}
             open={activePopup}
             onClose={handleChangePopup}
-            // title={
-            //   <span className="popup-title">Smart tracking =&nbsp;<span style={{ color: "#52C7A4", fontWeight: "700" }}>Great</span>&nbsp;Event Match Quality</span>
-            // }
-            // primaryAction={{
-            //   content: "TRY TWO OWLS",
-            //   onAction: handlerBtnGetStarted,
-            // }}
           >
             <Modal.Section>
               <div className="background-banner_cross">
-                <img src={background_popup_banner_cross} style={{width: '100%'}}/>
+                {/* <img src={background_popup_banner_cross} style={{ width: '100%' }} /> */}
+                <div className="popup-banner_cross-main">
+                  <div className="text-twitter_ads">Twitter Ads</div>
+                  <img src={icon_popup_banner_cross} />
+                </div>
               </div>
+
             </Modal.Section>
           </Modal>
         </div>
