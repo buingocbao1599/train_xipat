@@ -53,14 +53,14 @@ function App() {
           <p className="text-don_be_shy"> Don't be shy, </p>
           
         </div>
-        <div className="banner-text_heading" style={{ marginLeft: '14px' }}>
+        <div className="banner-text_heading1" style={{ marginLeft: '14px' }}>
           <p className="text-give">give</p>
           
         </div>
         <div className="banner-text_content">
           Twitter Ads
         </div>
-        <div className="banner-text_heading">
+        <div className="banner-text_heading2">
           <p className="text-a_try">a try</p>
         </div>
       </div>
