@@ -21,98 +21,82 @@
     margin-left: 6%;
     width: 50%;
 
-    .banner-text_heading {
-      p {
-        // font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 36px;
-        color: #05386b;
-        width: 160px;
-      }
-
-      .text-don_be_shy:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 160px;
-        height: 15px;
-        background-color: #c1ff72;
-        z-index: 0;
-      }
-
-      .text-don_be_shy:before {
-        content: "Don't be shy,";
-        position: absolute;
-        left: 0;
-        ;
-        color: #05386b;
-        z-index: 1;
-      }
+    .text {
+      // font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 36px;
+      color: #05386b;
+      max-width: 160px;
     }
 
-    .banner-text_heading1 {
-      p {
-        // font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 36px;
-        color: #05386b;
-      }
-
-      .text-give:after {
-        content: "";
-        position: absolute;
-        left: 172px;
-        top: 50%;
-        width: 54px;
-        height: 15px;
-        background-color: #c1ff72;
-        z-index: 0;
-      }
-
-      .text-give:before {
-        content: "give";
-        position: absolute;
-        left: 174px;
-        ;
-        color: #05386b;
-        z-index: 1;
-      }
+    .text-don_be_shy {
+      position: relative;
     }
 
-    .banner-text_heading2 {
-      p {
-        // font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 36px;
-        color: #05386b;
-      }
+    .text-don_be_shy:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 160px;
+      height: 15px;
+      background-color: #c1ff72;
+      z-index: 0;
+    }
 
-      .text-a_try:after {
-        content: "";
-        position: absolute;
-        left: 518px;
-        top: 50%;
-        width: 57px;
-        height: 15px;
-        background-color: #c1ff72;
-        z-index: 0;
-      }
+    .text-don_be_shy:before {
+      content: "Don't be shy,";
+      position: absolute;
+      left: 0;
+      color: #05386b;
+      z-index: 1;
+    }
 
-      .text-a_try::before {
-        content: "a try";
-        position: absolute;
-        left: 518px;
-        ;
-        color: #05386b;
-        z-index: 1;
-      }
+    .text-give {
+      margin-left: 16px;
+      position: relative;
+    }
+
+    .text-give:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 54px;
+      height: 15px;
+      background-color: #c1ff72;
+      z-index: 0;
+    }
+
+    .text-give:before {
+      content: "give";
+      position: absolute;
+      color: #05386b;
+      z-index: 1;
+    }
+
+    .text-a_try {
+      position: relative;
+    }
+
+    .text-a_try:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 57px;
+      height: 15px;
+      background-color: #c1ff72;
+      z-index: 0;
+    }
+
+    .text-a_try::before {
+      content: "a try";
+      position: absolute;
+      color: #05386b;
+      z-index: 1;
     }
 
     .banner-text_content {
@@ -178,17 +162,68 @@
 }
 
 .background-banner_cross {
-  position: relative;
+  // position: relative;
   background: url(./IMG/background_popup_banner.png);
+  width: 100%;
 
-  .popup-banner_cross-main {
-    // position: absolute;
-    // top: 0;
+  img {
+    max-width: 100%;
+  }
+
+  .modal-text {
+    position: absolute;
+    left: 85px;
+    top: 83px;
+
+    .text-twitter_ads {
+      width: 288px;
+      height: 72px;
+
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 72px;
+      color: #ffffff;
+    }
+
+    .text-got_you_down {
+      position: relative;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: #05386b;
+      margin-top: -12px;
+    }
+
+    .text-got_you_down:before {
+      content: "got you down?";
+      position: absolute;
+      left: 0;
+      color: #05386b;
+      z-index: 1;
+    }
+
+    .text-got_you_down:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 176px;
+      height: 20px;
+      background-color: #c1ff72;
+      z-index: 0;
+    }
+
+    .text-descrpition {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+
+      color: #05386b;
+    }
   }
 }
 
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .banner_main {
     height: auto;
     flex-direction: column;
@@ -203,64 +238,8 @@
       margin-right: auto;
       margin-top: 10px;
 
-      .banner-text_heading {
-        margin-bottom: 10px;
-
-        p {
-          width: auto;
-        }
-
-        .text-don_be_shy:after {
-          top: 43%;
-          left: 17.5%;
-
-        }
-
-        .text-don_be_shy:before {
-          // top: 20px;
-          left: 17.5%;
-        }
-      }
-
-      .banner-text_heading1 {
-        margin-bottom: 10px;
-
-        p {
-          width: auto;
-        }
-
-        .text-give:after {
-          left: 40.8%;
-          top: 43%;
-          width: 7%;
-        }
-
-        .text-give:before {
-          // top: 20px;
-          left: 40.8%;
-        }
-      }
-
-      .banner-text_heading2 {
-        margin-bottom: 10px;
-
-        p {
-          width: auto;
-        }
-
-        .text-a_try:after {
-          left: 74.8%;
-          top: 43%;
-          width: 8%;
-        }
-
-        .text-a_try:before {
-          left: 74.8%;
-          // top: 20px;
-        }
-      }
-
       .banner-text_content {
+        margin: 0px 8px;
         font-size: 32px;
         line-height: 48px;
       }
@@ -286,75 +265,41 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
   .banner_main {
     .banner-text {
+      .text {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .text-don_be_shy:after {
+        width: 98px;
+      }
+
+      .text-give:after {
+        width: 32px;
+      }
+
+      .text-a_try:after {
+        width: 36px;
+      }
+
       .banner-text_content {
-        font-size: 25px;
-        line-height: 26px;
-      }
-
-      .banner-text_heading {
-        p {
-          font-size: 17px;
-          line-height: 21px;
-          min-width: 104px;
-        }
-
-        .text-don_be_shy:before {
-          left: 3.6%;
-        }
-
-        .text-don_be_shy:after {
-          top: 30%;
-          left: 3.6%;
-          max-width: 104px;
-        }
-      }
-
-      .banner-text_heading1 {
-        p {
-          font-size: 17px;
-          line-height: 28px;
-        }
-
-        .text-give:before {
-          left: 34.9%;
-        }
-
-        .text-give:after {
-          top: 30%;
-          left: 34.9%;
-          width: 9%;
-        }
-      }
-
-      .banner-text_heading2 {
-        p {
-          font-size: 17px;
-          line-height: 28px;
-        }
-
-        .text-a_try:before {
-          left: 86.8%;
-        }
-
-        .text-a_try::after {
-          top: 30%;
-          left: 86.8%;
-          width: 10%;
-        }
+        font-size: 16px;
+        line-height: 16px;
       }
     }
 
     .banner-btn {
-      top: 48%;
+      top: 40%;
       .banner-popup {
         height: 48px;
-        
+
         .button_grab-free {
           width: 140px;
-  
+          height: 40px;
+
           .Polaris-Button__Text {
             font-size: 11px;
             line-height: 13px;
