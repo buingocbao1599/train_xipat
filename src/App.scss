@@ -15,7 +15,7 @@
 
   .banner-text {
     display: flex;
-    position: absolute;
+    position: relative;
     height: 100%;
     align-items: center;
     margin-left: 6%;
@@ -36,7 +36,7 @@
         content: "";
         position: absolute;
         left: 0;
-        bottom: 41px;
+        top: 50%;
         width: 160px;
         height: 15px;
         background-color: #c1ff72;
@@ -47,7 +47,7 @@
         content: "Don't be shy,";
         position: absolute;
         left: 0;
-        bottom: 41px;
+        ;
         color: #05386b;
         z-index: 1;
       }
@@ -67,7 +67,7 @@
         content: "";
         position: absolute;
         left: 172px;
-        bottom: 41px;
+        top: 50%;
         width: 54px;
         height: 15px;
         background-color: #c1ff72;
@@ -78,7 +78,7 @@
         content: "give";
         position: absolute;
         left: 174px;
-        bottom: 41px;
+        ;
         color: #05386b;
         z-index: 1;
       }
@@ -97,8 +97,8 @@
       .text-a_try:after {
         content: "";
         position: absolute;
-        left: 517px;
-        bottom: 41px;
+        left: 518px;
+        top: 50%;
         width: 57px;
         height: 15px;
         background-color: #c1ff72;
@@ -108,8 +108,8 @@
       .text-a_try::before {
         content: "a try";
         position: absolute;
-        left: 517px;
-        bottom: 41px;
+        left: 518px;
+        ;
         color: #05386b;
         z-index: 1;
       }
@@ -166,7 +166,7 @@
 
   .banner-btn {
     display: flex;
-    margin-left: 80%;
+    margin-left: 20%;
     align-items: center;
 
     .banner-popup {
@@ -187,29 +187,6 @@
   }
 }
 
-// @media screen and (max-width: 780px){
-//   .banner_main {
-//     .banner-text{
-//       width: 70%;
-//       align-items: baseline;
-//     }
-
-//     .banner-picture{
-//       left: 70%;
-
-//       img{
-//         max-width: 100px;
-//       }
-//     }
-
-//     .banner-btn{
-//       margin-left: 8%;
-//       margin-top: 3%;
-//     }
-//   }
-// }
-
-
 
 @media (max-width: 768px) {
   .banner_main {
@@ -218,12 +195,13 @@
     justify-content: center;
 
     .banner-text {
-      position: static;
+      // position: static;
       width: 100%;
       text-align: center;
+      justify-content: center;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 20px;
+      margin-top: 10px;
 
       .banner-text_heading {
         margin-bottom: 10px;
@@ -233,13 +211,14 @@
         }
 
         .text-don_be_shy:after {
-          top: 40px;
+          top: 43%;
+          left: 17.5%;
+
         }
 
         .text-don_be_shy:before {
-          bottom: 10px;
-          top: 20px;
-
+          // top: 20px;
+          left: 17.5%;
         }
       }
 
@@ -251,14 +230,14 @@
         }
 
         .text-give:after {
-          left: 172px;
-          top: 40px;
+          left: 40.8%;
+          top: 43%;
           width: 7%;
         }
 
         .text-give:before {
-          left: 172px;
-          top: 20px;
+          // top: 20px;
+          left: 40.8%;
         }
       }
 
@@ -270,14 +249,14 @@
         }
 
         .text-a_try:after {
-          left: 56%;
-          top: 40px;
+          left: 74.8%;
+          top: 43%;
           width: 8%;
         }
 
         .text-a_try:before {
-          left: 56%;
-          top: 20px;
+          left: 74.8%;
+          // top: 20px;
         }
       }
 
@@ -289,18 +268,99 @@
 
     .banner-btn {
       position: absolute;
-      left: 34%;
+      left: 48%;
       margin-left: 0;
-      top: 32%;
+      top: 36%;
     }
 
     .banner-picture {
       position: static;
-      width: 30%;
+      width: 40%;
       height: auto;
+      margin-left: 10%;
 
       img {
         max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner_main {
+    .banner-text {
+      .banner-text_content {
+        font-size: 25px;
+        line-height: 26px;
+      }
+
+      .banner-text_heading {
+        p {
+          font-size: 17px;
+          line-height: 21px;
+          min-width: 104px;
+        }
+
+        .text-don_be_shy:before {
+          left: 3.6%;
+        }
+
+        .text-don_be_shy:after {
+          top: 30%;
+          left: 3.6%;
+          max-width: 104px;
+        }
+      }
+
+      .banner-text_heading1 {
+        p {
+          font-size: 17px;
+          line-height: 28px;
+        }
+
+        .text-give:before {
+          left: 34.9%;
+        }
+
+        .text-give:after {
+          top: 30%;
+          left: 34.9%;
+          width: 9%;
+        }
+      }
+
+      .banner-text_heading2 {
+        p {
+          font-size: 17px;
+          line-height: 28px;
+        }
+
+        .text-a_try:before {
+          left: 86.8%;
+        }
+
+        .text-a_try::after {
+          top: 30%;
+          left: 86.8%;
+          width: 10%;
+        }
+      }
+    }
+
+    .banner-btn {
+      top: 48%;
+      .banner-popup {
+        height: 48px;
+        
+        .button_grab-free {
+          width: 140px;
+  
+          .Polaris-Button__Text {
+            font-size: 11px;
+            line-height: 13px;
+            height: 30px;
+          }
+        }
       }
     }
   }
