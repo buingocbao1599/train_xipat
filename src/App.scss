@@ -152,12 +152,7 @@
     display: flex;
     margin-left: 20%;
     align-items: center;
-
-    .banner-popup {
-      height: 118px;
-      display: flex;
-      align-items: center;
-    }
+    height: 118px;
   }
 }
 
@@ -172,8 +167,8 @@
 
   .modal-text {
     position: absolute;
-    left: 85px;
-    top: 83px;
+    left: 104px;
+    top: 82px;
 
     .text-twitter_ads {
       width: 288px;
@@ -188,10 +183,11 @@
     .text-got_you_down {
       position: relative;
       font-weight: 700;
-      font-size: 24px;
+      font-size: 25px;
       line-height: 36px;
       color: #05386b;
       margin-top: -12px;
+      margin-left: 1px;
     }
 
     .text-got_you_down:before {
@@ -206,7 +202,7 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 52%;
       width: 176px;
       height: 20px;
       background-color: #c1ff72;
@@ -214,11 +210,35 @@
     }
 
     .text-descrpition {
+      margin-top: 20px;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 22px;
       line-height: 30px;
 
       color: #05386b;
+    }
+
+    .btn-try_for_free {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 18px;
+      width: 171px;
+      height: 50px;
+      background: #c1ff72;
+      border: 1px solid #05386b;
+      border-radius: 5px;
+      margin-top: 36%;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: #05386b;
+      cursor: pointer;
+
+      svg {
+        margin-left: 10px;
+        margin-top: 3px;
+      }
     }
   }
 }
@@ -249,19 +269,45 @@
       position: absolute;
       left: 48%;
       margin-left: 0;
-      top: 36%;
+      top: 32%;
     }
 
     .banner-picture {
       position: static;
-      width: 40%;
+      width: 36%;
       height: auto;
-      margin-left: 10%;
+      margin-left: 14%;
 
       img {
         max-width: 100%;
       }
     }
+  }
+
+  .background-banner_cross {
+    .modal-text {
+      left: 17%;
+      top: 17%;
+    }
+  }
+}
+
+@media only screen and (max-width: 541px) {
+  .background-banner_cross {
+    .modal-text {
+      left: 15%;
+      top: 11%;
+      .btn-try_for_free {
+        margin-top: 28%;
+      }
+    }
+  }
+}
+
+@media (max-width: 47.9975em) {
+  .Polaris-Modal-Dialog__Modal {
+    bottom: 30% !important;
+    max-height: 100%;
   }
 }
 
@@ -293,18 +339,144 @@
 
     .banner-btn {
       top: 40%;
-      .banner-popup {
-        height: 48px;
 
-        .button_grab-free {
-          width: 140px;
-          height: 40px;
+      height: 48px;
 
-          .Polaris-Button__Text {
-            font-size: 11px;
-            line-height: 13px;
-            height: 30px;
-          }
+      .button_grab-free {
+        width: 140px;
+        height: 40px;
+
+        .Polaris-Button__Text {
+          font-size: 11px;
+          line-height: 13px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .background-banner_cross {
+    .modal-text {
+      left: 17%;
+      top: 6%;
+
+      .text-twitter_ads {
+        font-size: 40px;
+        line-height: 52px;
+        height: 54px;
+      }
+
+      .text-got_you_down {
+        font-size: 22px;
+        line-height: 32px;
+        margin-left: 5px;
+      }
+
+      .text-got_you_down:after {
+        width: 154px;
+      }
+
+      .text-descrpition {
+        font-size: 14px;
+        margin-top: 8%;
+      }
+      .btn-try_for_free {
+        margin-top: 18%;
+        width: 158px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 281px) {
+  .banner_main {
+    .banner-text {
+      .text {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .text-don_be_shy:after {
+        width: 73px;
+        height: 10px;
+      }
+
+      .text-give:after {
+        width: 26px;
+        height: 10px;
+      }
+
+      .text-a_try:after {
+        width: 30px;
+        height: 10px;
+      }
+
+      .banner-text_content {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+    .banner-btn {
+      top: 38%;
+      height: 36px;
+      left: 46%;
+
+      .button_grab-free {
+        width: 110px;
+        height: 30px;
+
+        .Polaris-Button__Text {
+          font-size: 10px;
+          line-height: 13px;
+          height: 30px;
+        }
+
+        svg {
+          width: 10px;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+  .background-banner_cross {
+    .modal-text {
+      left: 17%;
+      top: 6%;
+
+      .text-twitter_ads {
+        font-size: 30px;
+        line-height: 39px;
+        height: 39px;
+      }
+
+      .text-got_you_down {
+        font-size: 20px;
+        line-height: 28px;
+        margin-left: 5px;
+      }
+
+      .text-got_you_down:after {
+        width: 140px;
+        height: 15px;
+      }
+
+      .text-descrpition {
+        font-size: 11px;
+        margin-top: 5%;
+        line-height: 18px;
+      }
+      .btn-try_for_free {
+        margin-top: 14%;
+        width: 116px;
+        font-size: 10px;
+        height: 36px;
+
+        svg {
+          margin-top: 0px;
+          width: 10px;
         }
       }
     }

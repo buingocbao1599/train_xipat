@@ -19,7 +19,7 @@ function App() {
       <div className="button_grab-free">
         <Button
           className="banner-btn_tracking"
-          onClick={() => handlerBtnTracking()}
+          onClick={() => handlerBtnGrabFree()}
         >
           Grab free remedies
           <svg
@@ -51,8 +51,17 @@ function App() {
     );
   };
 
-  const handlerBtnTracking = () => {
+  const handlerBtnGrabFree = () => {
     activePopup === true ? setActivePopup(false) : setActivePopup(true);
+  };
+
+  const handlerBtnTryForFree = () => {
+    //     Facebook: https://apps.shopify.com/facebook-multi-pixels?surface_detail=fbpxinapp&surface_type=cross
+    //     GGfeed: https://apps.shopify.com/facebook-multi-pixels?surface_detail=feedinapp&surface_type=cross
+    //     Pinterest: https://apps.shopify.com/facebook-multi-pixels?surface_detail=pinterestinapp&surface_type=cross
+    //     Snapchat: https://apps.shopify.com/facebook-multi-pixels?surface_detail=snapinapp&surface_type=cross
+    //     GGtag: https://apps.shopify.com/facebook-multi-pixels?surface_detail=ggtaginapp&surface_type=cross
+    window.open('https://apps.shopify.com/facebook-multi-pixels?surface_detail=fbpxinapp&surface_type=cross');
   };
   return (
     <div className="banner_main">
@@ -66,7 +75,7 @@ function App() {
         <img src={pic_banner_cross} />
       </div>
       <div className="banner-btn">
-        <div className="banner-popup">
+        {/* <div className="banner-popup"> */}
           <Modal
             activator={activator()}
             open={activePopup}
@@ -77,13 +86,33 @@ function App() {
                 <div className="modal-text">
                   <p className="text-twitter_ads">Twitter Ads</p>
                   <p className="text-got_you_down">got you down?</p>
-                  <div className="text-descrpition">Turn your ads into winners with <span>5 powerful</span> Twitter Pixel events</div>
+                  <div className="text-descrpition">
+                    Turn your ads into winners <br /> with{" "}
+                    <span>5 powerful</span> Twitter Pixel events
+                  </div>
+                  <button className="btn-try_for_free" onClick={() => handlerBtnTryForFree()}>
+                    Try for free
+                    <svg
+                      width={15}
+                      height={13}
+                      viewBox="0 0 15 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M14.7 5.79001L9.69999 0.790006C9.51999 0.600006 9.26999 0.490005 8.98999 0.490005C8.43999 0.490005 7.98999 0.940005 7.98999 1.49001C7.98999 1.77001 8.09999 2.02001 8.27999 2.20001L11.57 5.49001H1.98999C1.43999 5.49001 0.98999 5.94001 0.98999 6.49001C0.98999 7.04001 1.43999 7.49001 1.98999 7.49001H11.58L8.28999 10.78C8.10999 10.96 7.99999 11.21 7.99999 11.49C7.99999 12.04 8.44999 12.49 8.99999 12.49C9.27999 12.49 9.52999 12.38 9.70999 12.2L14.71 7.20001C14.89 7.02001 15 6.77001 15 6.49001C15 6.21001 14.88 5.97001 14.7 5.79001Z"
+                        fill="#05386B"
+                      />
+                    </svg>
+                  </button>
                 </div>
                 <img src={icon_popup_banner_cross} />
               </div>
             </Modal.Section>
           </Modal>
-        </div>
+        {/* </div> */}
       </div>
 
       <div className="banner-close" onClick={() => handlerCloseBtn()}>
