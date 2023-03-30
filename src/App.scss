@@ -243,6 +243,31 @@
   }
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1160px) {
+  .banner_main {
+    .banner-text {
+      margin-left: 2%;
+      width: 60%;
+
+      .text-don_be_shy {
+        width: 164px;
+      }
+
+      .banner-text_content {
+        font-size: 46px;
+      }
+    }
+
+    .banner-btn {
+      margin-left: 10%;
+    }
+
+    .banner-picture {
+      left: 500px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .banner_main {
     height: auto;
@@ -311,6 +336,47 @@
   }
 }
 
+@media only screen and (min-width: 415px) and (max-width: 507px) {
+  .banner_main {
+    .banner-text {
+      .text {
+        font-size: 19px;
+        line-height: 20px;
+      }
+
+      .text-don_be_shy:after{
+        width: 118px;
+      } 
+
+      .text-give:after{
+        width: 40px;
+      }
+
+      .text-a_try:after{
+        width: 42px;
+      }
+
+      .banner-text_content{
+        font-size: 28px;
+      }
+    }
+
+    .banner-btn {
+      top: 20%;
+
+      .button_grab-free {
+        width: 170px;
+        height: 40px;
+        .Polaris-Button__Text {
+          font-size: 16px;
+          line-height: 20px;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .banner_main {
     .banner-text {
@@ -358,7 +424,7 @@
   .background-banner_cross {
     .modal-text {
       left: 17%;
-      top: 6%;
+      top: 8%;
 
       .text-twitter_ads {
         font-size: 40px;
@@ -378,7 +444,7 @@
 
       .text-descrpition {
         font-size: 14px;
-        margin-top: 8%;
+        margin-top: 6%;
       }
       .btn-try_for_free {
         margin-top: 18%;
@@ -386,6 +452,22 @@
         font-size: 18px;
       }
     }
+  }
+}
+
+@media only screen and (min-width: 377px) and (max-width: 394px) {
+  .text-descrpition {
+    margin-top: 4% !important;
+  }
+}
+
+@media only screen and (min-width: 282px) and (max-width: 376px) {
+  .text-twitter_ads {
+    line-height: 54px !important;
+    height: 48px !important;
+  }
+  .text-descrpition {
+    margin-top: 3% !important;
   }
 }
 

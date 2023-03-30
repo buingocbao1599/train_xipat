@@ -108,7 +108,7 @@ function App() {
                     </svg>
                   </button>
                 </div>
-                <img src={icon_popup_banner_cross} />
+                <img src={icon_popup_banner_cross} className="a"/>
               </div>
             </Modal.Section>
           </Modal>
