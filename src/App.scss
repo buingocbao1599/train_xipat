@@ -1,566 +1,505 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-
 .banner_main {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  height: 118px;
-  background: linear-gradient(90.36deg, #68c9f7 9.36%, #beeaff 89.96%);
-
-  .banner-close {
-    position: absolute;
-    right: 1.08%;
-    top: 13.48%;
-  }
-
-  .banner-text {
-    display: flex;
-    position: relative;
-    height: 100%;
-    align-items: center;
-    margin-left: 6%;
-    width: 50%;
-
-    .text {
-      // font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 26px;
-      line-height: 36px;
-      color: #05386b;
-      max-width: 160px;
-    }
-
-    .text-don_be_shy {
-      position: relative;
-    }
-
-    .text-don_be_shy:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 160px;
-      height: 15px;
-      background-color: #c1ff72;
-      z-index: 0;
-    }
-
-    .text-don_be_shy:before {
-      content: "Don't be shy,";
-      position: absolute;
-      left: 0;
-      color: #05386b;
-      z-index: 1;
-    }
-
-    .text-give {
-      margin-left: 16px;
-      position: relative;
-    }
-
-    .text-give:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 54px;
-      height: 15px;
-      background-color: #c1ff72;
-      z-index: 0;
-    }
-
-    .text-give:before {
-      content: "give";
-      position: absolute;
-      color: #05386b;
-      z-index: 1;
-    }
-
-    .text-a_try {
-      position: relative;
-    }
-
-    .text-a_try:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 57px;
-      height: 15px;
-      background-color: #c1ff72;
-      z-index: 0;
-    }
-
-    .text-a_try::before {
-      content: "a try";
-      position: absolute;
-      color: #05386b;
-      z-index: 1;
-    }
-
-    .banner-text_content {
-      // font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 72px;
-      color: #ffffff;
-      margin: -12px 8px 0px;
-    }
-  }
-
-  .button_grab-free {
-    background: #c1ff72;
-    width: 258px;
-    height: 50px;
-    display: flex;
-
-    .Polaris-Button {
-      background: #c1ff72;
-      width: 100%;
-      height: 100%;
-    }
-
-    .Polaris-Button__Text {
-      // width: 196px;
-      height: 30px;
-
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 30px;
-
-      color: #05386b;
-    }
-
-    svg {
-      margin-left: 10px;
-    }
-  }
-
-  .banner-picture {
-    position: absolute;
-    width: 161px;
-    height: 145px;
-    left: 620px;
-    top: 0px;
-  }
-
-  .banner-btn {
-    display: flex;
-    margin-left: 20%;
-    align-items: center;
-    height: 118px;
-  }
+	position: relative;
+	display: flex;
+	width: 100vw;
+	height: 118px;
+	background: linear-gradient(90.36deg, #68c9f7 9.36%, #beeaff 89.96%);
+	.banner-close {
+		position: absolute;
+		right: 1.08%;
+		top: 13.48%;
+	}
+	.banner-text {
+		display: flex;
+		position: relative;
+		height: 100%;
+		align-items: center;
+		margin-left: 6%;
+		width: 50%;
+		.text {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 26px;
+			line-height: 36px;
+			color: #05386b;
+			max-width: 160px;
+		}
+		.text-don_be_shy {
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				width: 160px;
+				height: 15px;
+				background-color: #c1ff72;
+				z-index: 0;
+			}
+			&:before {
+				content: "Don't be shy,";
+				position: absolute;
+				left: 0;
+				color: #05386b;
+				z-index: 1;
+			}
+		}
+		.text-give {
+			margin-left: 16px;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				width: 54px;
+				height: 15px;
+				background-color: #c1ff72;
+				z-index: 0;
+			}
+			&:before {
+				content: "give";
+				position: absolute;
+				color: #05386b;
+				z-index: 1;
+			}
+		}
+		.text-a_try {
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				width: 57px;
+				height: 15px;
+				background-color: #c1ff72;
+				z-index: 0;
+			}
+			&::before {
+				content: "a try";
+				position: absolute;
+				color: #05386b;
+				z-index: 1;
+			}
+		}
+		.banner-text_content {
+			font-style: normal;
+			font-weight: 900;
+			font-size: 48px;
+			line-height: 72px;
+			color: #ffffff;
+			margin: -12px 8px 0px;
+		}
+	}
+	.button_grab-free {
+		background: #c1ff72;
+		width: 258px;
+		height: 50px;
+		display: flex;
+		.Polaris-Button {
+			background: #c1ff72;
+			width: 100%;
+			height: 100%;
+		}
+		.Polaris-Button__Text {
+			height: 30px;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 30px;
+			color: #05386b;
+		}
+		svg {
+			margin-left: 10px;
+		}
+	}
+	.banner-picture {
+		position: absolute;
+		width: 161px;
+		height: 145px;
+		left: 620px;
+		top: 0px;
+	}
+	.banner-btn {
+		display: flex;
+		margin-left: 20%;
+		align-items: center;
+		height: 118px;
+	}
 }
-
 .background-banner_cross {
-  // position: relative;
-  background: url(./IMG/background_popup_banner.png);
-  width: 100%;
-
-  img {
-    max-width: 100%;
-  }
-
-  .modal-text {
-    position: absolute;
-    left: 104px;
-    top: 82px;
-
-    .text-twitter_ads {
-      width: 288px;
-      height: 72px;
-
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 72px;
-      color: #ffffff;
-    }
-
-    .text-got_you_down {
-      position: relative;
-      font-weight: 700;
-      font-size: 25px;
-      line-height: 36px;
-      color: #05386b;
-      margin-top: -12px;
-      margin-left: 1px;
-    }
-
-    .text-got_you_down:before {
-      content: "got you down?";
-      position: absolute;
-      left: 0;
-      color: #05386b;
-      z-index: 1;
-    }
-
-    .text-got_you_down:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 52%;
-      width: 176px;
-      height: 20px;
-      background-color: #c1ff72;
-      z-index: 0;
-    }
-
-    .text-descrpition {
-      margin-top: 20px;
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 30px;
-
-      color: #05386b;
-    }
-
-    .btn-try_for_free {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 18px;
-      width: 171px;
-      height: 50px;
-      background: #c1ff72;
-      border: 1px solid #05386b;
-      border-radius: 5px;
-      margin-top: 36%;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
-      color: #05386b;
-      cursor: pointer;
-
-      svg {
-        margin-left: 10px;
-        margin-top: 3px;
-      }
-    }
-  }
+	background: url(./IMG/background_popup_banner.png);
+	width: 100%;
+	img {
+		max-width: 100%;
+	}
+	.modal-text {
+		position: absolute;
+		left: 104px;
+		top: 82px;
+		.text-twitter_ads {
+			width: 288px;
+			height: 72px;
+			font-weight: 900;
+			font-size: 48px;
+			line-height: 72px;
+			color: #ffffff;
+		}
+		.text-got_you_down {
+			position: relative;
+			font-weight: 700;
+			font-size: 25px;
+			line-height: 36px;
+			color: #05386b;
+			margin-top: -12px;
+			margin-left: 1px;
+			&:before {
+				content: "got you down?";
+				position: absolute;
+				left: 0;
+				color: #05386b;
+				z-index: 1;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 52%;
+				width: 176px;
+				height: 20px;
+				background-color: #c1ff72;
+				z-index: 0;
+			}
+		}
+		.text-descrpition {
+			margin-top: 20px;
+			font-weight: 600;
+			font-size: 22px;
+			line-height: 30px;
+			color: #05386b;
+		}
+		.btn-try_for_free {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px 18px;
+			width: 171px;
+			height: 50px;
+			background: #c1ff72;
+			border: 1px solid #05386b;
+			border-radius: 5px;
+			margin-top: 36%;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 30px;
+			color: #05386b;
+			cursor: pointer;
+			svg {
+				margin-left: 10px;
+				margin-top: 3px;
+			}
+		}
+	}
 }
-
 @media only screen and (min-width: 1025px) and (max-width: 1160px) {
-  .banner_main {
-    .banner-text {
-      margin-left: 2%;
-      width: 60%;
-
-      .text-don_be_shy {
-        width: 164px;
-      }
-
-      .banner-text_content {
-        font-size: 46px;
-      }
-    }
-
-    .banner-btn {
-      margin-left: 10%;
-    }
-
-    .banner-picture {
-      left: 500px;
-    }
-  }
+	.banner_main {
+		.banner-text {
+			margin-left: 2%;
+			width: 60%;
+			.text-don_be_shy {
+				width: 164px;
+			}
+			.banner-text_content {
+				font-size: 46px;
+			}
+		}
+		.banner-btn {
+			margin-left: 10%;
+		}
+		.banner-picture {
+			left: 500px;
+		}
+	}
 }
-
 @media only screen and (max-width: 1024px) {
-  .banner_main {
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-
-    .banner-text {
-      // position: static;
-      width: 100%;
-      text-align: center;
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 10px;
-
-      .banner-text_content {
-        margin: 0px 8px;
-        font-size: 32px;
-        line-height: 48px;
-      }
-    }
-
-    .banner-btn {
-      position: absolute;
-      left: 48%;
-      margin-left: 0;
-      top: 32%;
-    }
-
-    .banner-picture {
-      position: static;
-      width: 36%;
-      height: auto;
-      margin-left: 14%;
-
-      img {
-        max-width: 100%;
-      }
-    }
-  }
-
-  .background-banner_cross {
-    .modal-text {
-      left: 17%;
-      top: 17%;
-    }
-  }
+	.banner_main {
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		.banner-text {
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+			.banner-text_content {
+				margin: 0px 8px;
+				font-size: 32px;
+				line-height: 48px;
+			}
+		}
+		.banner-btn {
+			position: absolute;
+			left: 48%;
+			margin-left: 0;
+			top: 32%;
+		}
+		.banner-picture {
+			position: static;
+			width: 36%;
+			height: auto;
+			margin-left: 14%;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+	.background-banner_cross {
+		.modal-text {
+			left: 17%;
+			top: 17%;
+		}
+	}
 }
-
 @media only screen and (max-width: 541px) {
-  .background-banner_cross {
-    .modal-text {
-      left: 15%;
-      top: 11%;
-      .btn-try_for_free {
-        margin-top: 28%;
-      }
-    }
-  }
+	.banner_main {
+		.banner-btn {
+			height: 108px;
+		}
+		.button_grab-free {
+			width: 234px;
+			.Polaris-Button__Text {
+				font-size: 18px;
+			}
+		}
+	}
+	.background-banner_cross {
+		.modal-text {
+			left: 15%;
+			top: 11%;
+			.btn-try_for_free {
+				margin-top: 28%;
+			}
+		}
+	}
 }
-
 @media (max-width: 47.9975em) {
-  .Polaris-Modal-Dialog__Modal {
-    bottom: 30% !important;
-    max-height: 100%;
-  }
+	.Polaris-Modal-Dialog__Modal {
+		bottom: 30% !important;
+		max-height: 100%;
+	}
 }
-
 @media only screen and (min-width: 415px) and (max-width: 507px) {
-  .banner_main {
-    .banner-text {
-      .text {
-        font-size: 19px;
-        line-height: 20px;
-      }
-
-      .text-don_be_shy:after{
-        width: 118px;
-      } 
-
-      .text-give:after{
-        width: 40px;
-      }
-
-      .text-a_try:after{
-        width: 42px;
-      }
-
-      .banner-text_content{
-        font-size: 28px;
-      }
-    }
-
-    .banner-btn {
-      top: 20%;
-
-      .button_grab-free {
-        width: 170px;
-        height: 40px;
-        .Polaris-Button__Text {
-          font-size: 16px;
-          line-height: 20px;
-          height: 38px;
-        }
-      }
-    }
-  }
+	.banner_main {
+		.banner-text {
+			.text {
+				font-size: 19px;
+				line-height: 20px;
+			}
+			.text-don_be_shy {
+				&:after {
+					width: 118px;
+				}
+			}
+			.text-give {
+				&:after {
+					width: 40px;
+				}
+			}
+			.text-a_try {
+				&:after {
+					width: 42px;
+				}
+			}
+			.banner-text_content {
+				font-size: 28px;
+			}
+		}
+		.banner-btn {
+			top: 20%;
+			.button_grab-free {
+				width: 170px;
+				height: 40px;
+				.Polaris-Button__Text {
+					font-size: 16px;
+					line-height: 20px;
+					height: 38px;
+				}
+			}
+		}
+	}
 }
-
 @media only screen and (max-width: 414px) {
-  .banner_main {
-    .banner-text {
-      .text {
-        font-size: 16px;
-        line-height: 16px;
-      }
-
-      .text-don_be_shy:after {
-        width: 98px;
-      }
-
-      .text-give:after {
-        width: 32px;
-      }
-
-      .text-a_try:after {
-        width: 36px;
-      }
-
-      .banner-text_content {
-        font-size: 16px;
-        line-height: 16px;
-      }
-    }
-
-    .banner-btn {
-      top: 40%;
-
-      height: 48px;
-
-      .button_grab-free {
-        width: 140px;
-        height: 40px;
-
-        .Polaris-Button__Text {
-          font-size: 11px;
-          line-height: 13px;
-          height: 30px;
-        }
-      }
-    }
-  }
-
-  .background-banner_cross {
-    .modal-text {
-      left: 17%;
-      top: 8%;
-
-      .text-twitter_ads {
-        font-size: 40px;
-        line-height: 52px;
-        height: 54px;
-      }
-
-      .text-got_you_down {
-        font-size: 22px;
-        line-height: 32px;
-        margin-left: 5px;
-      }
-
-      .text-got_you_down:after {
-        width: 154px;
-      }
-
-      .text-descrpition {
-        font-size: 14px;
-        margin-top: 6%;
-      }
-      .btn-try_for_free {
-        margin-top: 18%;
-        width: 158px;
-        font-size: 18px;
-      }
-    }
-  }
+	.banner_main {
+		.banner-text {
+			.text {
+				font-size: 16px;
+				line-height: 16px;
+			}
+			.text-don_be_shy {
+				&:after {
+					width: 98px;
+					height: 12px;
+				}
+			}
+			.text-give {
+				&:after {
+					width: 32px;
+					height: 12px;
+				}
+			}
+			.text-a_try {
+				&:after {
+					width: 36px;
+					height: 12px;
+				}
+			}
+			.banner-text_content {
+				font-size: 16px;
+				line-height: 16px;
+			}
+		}
+		.banner-btn {
+			top: 40%;
+			height: 48px;
+			.button_grab-free {
+				width: 140px;
+				height: 40px;
+				.Polaris-Button__Text {
+					font-size: 11px;
+					line-height: 13px;
+					height: 30px;
+				}
+			}
+		}
+	}
+	.background-banner_cross {
+		.modal-text {
+			left: 17%;
+			top: 8%;
+			.text-twitter_ads {
+				font-size: 40px;
+				line-height: 52px;
+				height: 54px;
+			}
+			.text-got_you_down {
+				font-size: 22px;
+				line-height: 32px;
+				margin-left: 5px;
+				&:after {
+					width: 154px;
+				}
+			}
+			.text-descrpition {
+				font-size: 14px;
+				margin-top: 6%;
+			}
+			.btn-try_for_free {
+				margin-top: 18%;
+				width: 158px;
+				font-size: 18px;
+			}
+		}
+	}
 }
-
 @media only screen and (min-width: 377px) and (max-width: 394px) {
-  .text-descrpition {
-    margin-top: 4% !important;
-  }
+	.text-descrpition {
+		margin-top: 4% !important;
+	}
 }
-
 @media only screen and (min-width: 282px) and (max-width: 376px) {
-  .text-twitter_ads {
-    line-height: 54px !important;
-    height: 48px !important;
-  }
-  .text-descrpition {
-    margin-top: 3% !important;
-  }
+	.text-twitter_ads {
+		line-height: 54px !important;
+		height: 48px !important;
+	}
+	.text-descrpition {
+		margin-top: 3% !important;
+	}
 }
-
 @media only screen and (max-width: 281px) {
-  .banner_main {
-    .banner-text {
-      .text {
-        font-size: 12px;
-        line-height: 16px;
-      }
-
-      .text-don_be_shy:after {
-        width: 73px;
-        height: 10px;
-      }
-
-      .text-give:after {
-        width: 26px;
-        height: 10px;
-      }
-
-      .text-a_try:after {
-        width: 30px;
-        height: 10px;
-      }
-
-      .banner-text_content {
-        font-size: 16px;
-        line-height: 16px;
-      }
-    }
-
-    .banner-btn {
-      top: 38%;
-      height: 36px;
-      left: 46%;
-
-      .button_grab-free {
-        width: 110px;
-        height: 30px;
-
-        .Polaris-Button__Text {
-          font-size: 10px;
-          line-height: 13px;
-          height: 30px;
-        }
-
-        svg {
-          width: 10px;
-          padding-top: 5px;
-        }
-      }
-    }
-  }
-
-  .background-banner_cross {
-    .modal-text {
-      left: 17%;
-      top: 6%;
-
-      .text-twitter_ads {
-        font-size: 30px;
-        line-height: 39px;
-        height: 39px;
-      }
-
-      .text-got_you_down {
-        font-size: 20px;
-        line-height: 28px;
-        margin-left: 5px;
-      }
-
-      .text-got_you_down:after {
-        width: 140px;
-        height: 15px;
-      }
-
-      .text-descrpition {
-        font-size: 11px;
-        margin-top: 5%;
-        line-height: 18px;
-      }
-      .btn-try_for_free {
-        margin-top: 14%;
-        width: 116px;
-        font-size: 10px;
-        height: 36px;
-
-        svg {
-          margin-top: 0px;
-          width: 10px;
-        }
-      }
-    }
-  }
+	.banner_main {
+		.banner-text {
+			.text {
+				font-size: 12px;
+				line-height: 16px;
+			}
+			.text-don_be_shy {
+				&:after {
+					width: 73px;
+					height: 8px;
+				}
+			}
+			.text-give {
+				&:after {
+					width: 26px;
+					height: 8px;
+				}
+			}
+			.text-a_try {
+				&:after {
+					width: 30px;
+					height: 8px;
+				}
+			}
+			.banner-text_content {
+				font-size: 16px;
+				line-height: 16px;
+			}
+		}
+		.banner-btn {
+			top: 38%;
+			height: 36px;
+			left: 46%;
+			.button_grab-free {
+				width: 110px;
+				height: 30px;
+				.Polaris-Button__Text {
+					font-size: 8px;
+					line-height: 13px;
+					height: 30px;
+				}
+				svg {
+					width: 10px;
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+	.background-banner_cross {
+		.modal-text {
+			left: 17%;
+			top: 6%;
+			.text-twitter_ads {
+				font-size: 30px;
+				line-height: 39px;
+				height: 39px;
+			}
+			.text-got_you_down {
+				font-size: 20px;
+				line-height: 28px;
+				margin-left: 5px;
+				&:after {
+					width: 140px;
+					height: 15px;
+				}
+			}
+			.text-descrpition {
+				font-size: 11px;
+				margin-top: 5%;
+				line-height: 18px;
+			}
+			.btn-try_for_free {
+				margin-top: 14%;
+				width: 116px;
+				font-size: 10px;
+				height: 36px;
+				svg {
+					margin-top: 0px;
+					width: 10px;
+				}
+			}
+		}
+	}
 }

@@ -2,7 +2,6 @@ import React, { useCallback, useState } from "react";
 import { Modal, Button } from "@shopify/polaris";
 import pic_banner_cross from "./IMG/pic_banner_cross.png";
 import icon_popup_banner_cross from "./IMG/icon-popup_banner_cross.png";
-import background_popup_banner_cross from "./IMG/background_popup_banner.png";
 import "./App.scss";
 
 function App() {
@@ -75,7 +74,6 @@ function App() {
         <img src={pic_banner_cross} />
       </div>
       <div className="banner-btn">
-        {/* <div className="banner-popup"> */}
           <Modal
             activator={activator()}
             open={activePopup}
